@@ -78,5 +78,13 @@ discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
+## Special Thanks
+
+This project is hugely inspired by 
+[HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate).
+
+And thank you [@adamwathan](https://twitter.com/adamwathan) for creating
+TaildwindCSS!
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
