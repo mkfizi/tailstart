@@ -2,6 +2,8 @@
 
 Tailstart is a HTML5 and TailwindCSS boilerplate.
 
+[View Demo](https://mkfizi.github.io/tailstart)
+
 ## Installation
 
 Use git command to download Tailstart:
