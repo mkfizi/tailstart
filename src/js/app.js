@@ -34,10 +34,21 @@ const toggleDarkMode = () => {
 }
 
 /**
+ * Handle viewport issues for mobile browsers
+ * * Read https://stackoverflow.com/questions/37112218/css3-100vh-not-constant-in-mobile-browser
+ */
+const handleViewport = () => {
+    const viewportHeight = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", viewportHeight + "px");
+}
+
+/**
  *  Add event listener for dark mode toggle to button and window. This code
  *  executes when window is loaded. 
  */
 window.onload = () => {
     document.getElementById("darkModeToggle").addEventListener("click", () => toggleDarkMode());
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => toggleDarkMode());
+    window.addEventListener("resize", () => {handleViewport()});
+    handleViewport();
 }
