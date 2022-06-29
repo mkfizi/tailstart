@@ -1,54 +1,82 @@
-/**
- * Add and remove 'transition-none' classes to elements that have any 
- * 'transition' and 'transition-*' classes to avoid any animations effect
- * when toggling dark mode.
- */
-const toggleTransitions = () => {
-    let elements = document.querySelectorAll(`.transition, 
-                                            .transition-all, 
-                                            .transition-colors, 
-                                            .transition-opacity, 
-                                            .transition-shadow, 
-                                            .transition-transform`);
+"use strict";
 
-    for (let i = 0; i < elements.length; i++) {
-        let element = elements[i];
-        element.classList.add("transition-none");
-        setTimeout(() => { element.classList.remove("transition-none"); }, 1000);
+const app = {
+    viewportHeight: window.innerHeight * 0.01,
+
+    /**
+     * Add and remove 'transition-none' classes to elements that have any 
+     * 'transition' and 'transition-*' classes to avoid any animations effect
+     * when toggling dark mode.
+     * 
+     * !!! NOTE: 
+     * For this to work, make sure 'transition-none' is defined after other
+     * 'transition' and 'transition-*' classes in CSS output file.
+     */
+    handleTransition: () => {
+        let transitions = document.querySelectorAll(".transition, .transition-all, .transition-colors, .transition-opacity, .transition-shadow, .transition-transform");
+    
+        for (let i = 0; i < transitions.length; i++) {
+            transitions[i].classList.add("transition-none");
+            setTimeout(() => { transitions[i].classList.remove("transition-none"); }, 1000);
+        }
+    },
+
+    /**
+     * Get theme value from local storage or device's theme settings. 
+     * @return (boolean) - Theme value
+     */
+    getTheme: () => {
+        if (localStorage.theme === "light" || !("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: light)").matches) return true;
+        if (localStorage.theme === "dark" || !("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches) return false;
+    },
+
+    /**
+     * Toggles dark mode. 
+     */
+    toggleDarkMode: () => {
+        app.handleTransition();
+        app.getTheme()
+            ? app.enableDarkMode()
+            : app.disableDarkMode();
+    },
+    
+    /**
+     * Enable dark mode. 
+     */
+     enableDarkMode: () => {
+        localStorage.theme = "dark";
+        document.documentElement.classList.add("dark");
+    },
+
+    /**
+     * Disable dark mode. 
+     */
+    disableDarkMode: () => {
+        localStorage.theme = "light";
+        document.documentElement.classList.remove("dark")
+    },
+
+    /**
+     * Handle viewport issues for mobile browsers.
+     * # Refer https://stackoverflow.com/questions/37112218/css3-100vh-not-constant-in-mobile-browser
+     */
+    handleViewport: () => {
+        document.documentElement.style.setProperty("--vh", app.viewportHeight + "px");
+    },
+
+    /**
+     * Initialize dark mode.
+     */
+    initialize: () => {
+        window.onload = () => {
+            document.getElementById("darkModeToggle").addEventListener("click", () => app.toggleDarkMode());
+            app.handleViewport();
+        }
+
+        window.onresize = () => {
+            app.handleViewport();
+        }
     }
 }
 
-/**
- *  Toggles dark mode. 
- */
-const toggleDarkMode = () => {
-    toggleTransitions();
-
-    if (localStorage.theme === "light" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: light)").matches)) {
-        localStorage.theme = "dark";
-        document.documentElement.classList.add("dark");
-    } else if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-        localStorage.theme = "light";
-        document.documentElement.classList.remove("dark")
-    }; 
-}
-
-/**
- * Handle viewport issues for mobile browsers
- * * Read https://stackoverflow.com/questions/37112218/css3-100vh-not-constant-in-mobile-browser
- */
-const handleViewport = () => {
-    const viewportHeight = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty("--vh", viewportHeight + "px");
-}
-
-/**
- *  Add event listener for dark mode toggle to button and window. This code
- *  executes when window is loaded. 
- */
-window.onload = () => {
-    document.getElementById("darkModeToggle").addEventListener("click", () => toggleDarkMode());
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => toggleDarkMode());
-    window.addEventListener("resize", () => {handleViewport()});
-    handleViewport();
-}
+app.initialize();
