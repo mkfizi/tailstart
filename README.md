@@ -75,6 +75,39 @@ dark mode theme will uses value according to device's current theme setting.
 
 You may customize dark mode scripts located in `app.js` that suits your need.
 
+### Viewport Fix for Mobile Browsers
+
+Tailstart include a fix for the notorious [viewport issue on mobile browsers](https://stackoverflow.com/questions/37112218/css3-100vh-not-constant-in-mobile-browser)
+where is calculate the actual browser's viewport and append the value on
+targeted classes that use 'vh' unit on it's properties.
+
+Targeted classes are defined in `tailwind.config.js` by adding `calc(var(--vh, 1vh) * [number])`
+on defined properties where `[number]` is the number of the viewport height. 
+By default Tailstart append this value on `min-h-screen` and `h-screen` classes.
+
+Here is an on how to extend this feature on other existing or custom classes
+that uses 'vh' unit on it's properties:
+```
+//tailwind.config.js
+...
+    theme: {
+        extend: {
+            height: {
+                "xl": "calc(var(--vh, 1vh) * 50)",
+            }
+        }
+    }
+...
+
+// CSS output
+.h-xl{
+    height: calc(var(--vh, 1vh) * 50) // This is equivalent to 50vh
+}
+```
+
+Refer here on how to further customize `tailwind.config.js`:
+[TailwindCSS Theme Configuration](https://tailwindcss.com/docs/theme)
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to
