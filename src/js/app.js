@@ -65,12 +65,21 @@ const app = {
     },
 
     /**
+     * Set footer current year.
+     */
+    setFooterCurrentYear: () => {
+        const element = document.getElementById("footerCurrentYear");
+        element.innerHTML = new Date().getFullYear();
+    },
+
+    /**
      * Initialize app.
      */
     initialize: () => {
         window.onload = () => {
             document.getElementById("darkModeToggle").addEventListener("click", () => app.toggleDarkMode());
             app.handleViewport();
+            app.setFooterCurrentYear();
         }
 
         window.onresize = () => {
