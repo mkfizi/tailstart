@@ -631,20 +631,16 @@ video {
   margin-bottom: 0.5rem;
 }
 
+.mt-40 {
+  margin-top: 10rem;
+}
+
 .mb-8 {
   margin-bottom: 2rem;
 }
 
 .mb-1 {
   margin-bottom: 0.25rem;
-}
-
-.mt-36 {
-  margin-top: 9rem;
-}
-
-.mt-40 {
-  margin-top: 10rem;
 }
 
 .flex {
@@ -666,10 +662,6 @@ video {
 
 .max-w-md {
   max-width: 28rem;
-}
-
-.resize {
-  resize: both;
 }
 
 .items-center {
