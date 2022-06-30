@@ -90,17 +90,18 @@ that uses 'vh' unit on it's properties:
 ```
 //tailwind.config.js
 ...
-    theme: {
-        extend: {
-            height: {
-                "xl": "calc(var(--vh, 1vh) * 50)",
-            }
+theme: {
+    extend: {
+        height: {
+            "xl": ["50vh", "calc(var(--vh, 1vh) * 50)"],
         }
     }
+}
 ...
 
 // CSS output
 .h-xl{
+    height: 50vh // Fallback value
     height: calc(var(--vh, 1vh) * 50) // This is equivalent to 50vh
 }
 ```
