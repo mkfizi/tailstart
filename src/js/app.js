@@ -65,7 +65,7 @@ const app = {
     },
 
     /**
-     * Initialize dark mode.
+     * Initialize app.
      */
     initialize: () => {
         window.onload = () => {
