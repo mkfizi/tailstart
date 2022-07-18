@@ -121,6 +121,8 @@ Please make sure to update tests as appropriate.
 This project is hugely inspired by 
 [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate).
 
+Icons used are from [Tabler Icons](https://tablericons.com/).
+
 And thank you [@adamwathan](https://twitter.com/adamwathan) for creating
 TaildwindCSS!
 
