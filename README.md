@@ -78,7 +78,7 @@ You may customize dark mode scripts located in `app.js` that suits your need.
 ### Viewport Fix for Mobile Browsers
 
 Tailstart include a fix for the notorious [viewport issue on mobile browsers](https://stackoverflow.com/questions/37112218/css3-100vh-not-constant-in-mobile-browser)
-where is calculate the actual browser's viewport and append the value on
+where it calculate the actual browser's viewport and append the value on
 targeted classes that use 'vh' unit on it's properties.
 
 Targeted classes are defined in `tailwind.config.js` by adding `calc(var(--vh, 1vh) * [number])`
