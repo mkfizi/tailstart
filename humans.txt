@@ -12,4 +12,4 @@
 
     HTML5
     TailwindCSS
-    Native JS
+    Vanilla Javascript
