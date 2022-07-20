@@ -53,16 +53,16 @@ for image files and `fonts` for font files.
 
 ### src/css
 
-This directory should contain all of your project's CSS files. For starter, it
-contains below files: 
+This directory should contain all of your project's CSS files. For starter, 
+this folder contains below files: 
 
 * `input.css` ─ TailwindCSS variable declaration.
 * `style.css` ─ Rendered TailwindCSS variable outputs.
 
 ### src/js
 
-This directory should contain all of your project's Javscript files. For starter,
-it contains below files: 
+This directory should contain all of your project's Javscript files. For 
+starter, this folder contains below file: 
 
 * `script.js` ─ Main Javascript source codes.
 
