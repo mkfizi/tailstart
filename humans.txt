@@ -2,11 +2,15 @@
 
 # Team
 
-    <name> -- <role> -- <twitter>
+    Khafizi Noh [Programmer] @mkfizi
 
 # Special Thanks
 
-    <name>
+    @roblarsenwww [HTML5 Boilerplate]
+    @christianoliff [HTML5 Boilerplate]
+    @csaba_kissi [Tabler Icons]
+    @codecalm [Tabler Icons]
+    @adamwathan [TailwindCSS]
 
 # Technology Stack
 
