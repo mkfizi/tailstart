@@ -14,7 +14,7 @@ By default, Tailstart directory initially looks as below:
 │   │   ├── input.css
 │   │   └── style.css
 │   └── js
-│       └── app.js
+│       └── script.js
 ├── .editorconfig
 ├── .gitattributes
 ├── .gitignore
@@ -64,7 +64,7 @@ contains below files:
 This directory should contain all your project's Javscript files. For starter,
 it contains below files: 
 
-* `app.js` ─ Main Javascript source codes.
+* `script.js` ─ Main Javascript source codes.
 
 ## HTML Pages
 
