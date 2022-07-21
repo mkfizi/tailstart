@@ -40,7 +40,7 @@ Tailstart does not include bundler tools such as `webpack` or `parcel` since it
 is a bare-bone boilerplate and we want it to be adaptable with any development
 stacks.
 
-Tailstart can be further customize and integrated with any frameworks according
+Tailstart can be further customized and integrated with any frameworks according
 to your project's requirement.
 
 You may refer here for more information about Tailstart's directory structure:
