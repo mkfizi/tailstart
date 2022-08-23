@@ -30,6 +30,7 @@ By default, Tailstart directory initially looks as below:
 ├── favicon.ico
 ├── humans.txt
 ├── index.html
+├── LICENSE
 ├── package-lock.json
 ├── package.json
 ├── README.md
