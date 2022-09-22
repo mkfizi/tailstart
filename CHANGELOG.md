@@ -16,6 +16,10 @@ Types of changes:
 ## [Unreleased]
 Put unreleased changes here.
 
+## [0.1.1] - 2022-09-23
+### Added
+* Font family default and fallbacks.
+
 ## [0.1.0] - 2022-06-21
 ### Added
-- First release.
+* First release.
