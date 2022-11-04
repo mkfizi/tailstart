@@ -40,15 +40,15 @@ window.onload = () => {
     darkModeToggle.addEventListener("click", toggleDarkMode);
     
     /**
-     * Handle viewport issues for mobile browsers.
-     */
-    const setViewport = () => {
+    * Viewport height fix for mobile browser.
+    */
+    const fixViewportHeight = () => {
         document.documentElement.style.setProperty("--vh", (window.innerHeight * 0.01) + "px");
     }
 
-    // Set viewport fix event listener.
-    window.addEventListener("resize", setViewport);
+    // Event listener for viewport fix when resizing from mobile to desktop.
+    window.addEventListener("resize", fixViewportHeight);
 
-    // Trigger viewport fix on window load.
-    setViewport();
+    // Trigger viewport fix when first time load.
+    fixViewportHeight();
 }
