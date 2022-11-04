@@ -40,8 +40,8 @@ window.onload = () => {
     darkModeToggle.addEventListener("click", toggleDarkMode);
     
     /**
-    * Viewport height fix for mobile browser.
-    */
+     * Viewport height fix for mobile browser.
+     */
     const fixViewportHeight = () => {
         document.documentElement.style.setProperty("--vh", (window.innerHeight * 0.01) + "px");
     }
