@@ -16,6 +16,11 @@ Types of changes:
 ## [Unreleased]
 Put unreleased changes here.
 
+## [0.1.2] - 2022-11-05
+### Changed
+* Background color in dark mode.
+* Rename fix viewport height function.
+
 ## [0.1.1] - 2022-09-23
 ### Added
 * Font family default and fallbacks.
