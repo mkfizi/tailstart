@@ -16,6 +16,9 @@ Types of changes:
 ## [Unreleased]
 Put unreleased changes here.
 
+### Changed
+* Method of calling script after document DOM is loaded.
+
 ## [0.1.2] - 2022-11-05
 ### Changed
 * Background color in dark mode.
