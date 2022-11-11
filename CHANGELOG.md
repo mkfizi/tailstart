@@ -16,8 +16,10 @@ Types of changes:
 ## [Unreleased]
 Put unreleased changes here.
 
+## [0.1.3] - 2022-11-11
 ### Changed
 * Method of calling script after document DOM is loaded.
+* Call to action links point to Github readme page.
 
 ## [0.1.2] - 2022-11-05
 ### Changed

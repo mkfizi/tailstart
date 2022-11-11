@@ -46,7 +46,7 @@ By default, Tailstart directory initially looks as below:
 This folder contains project's CSSs, Javscript and asset related files. For
 starter, it contains `css` and `js` directory. 
 
-The name for `src` can be changed to conventional name for source file such as
+The name for `src` can be changed to conventional name for source files such as
 `assets` and can be further customized according to your project's requirements.
 
 Any asset related files can be included by creating new directories such as `img`
