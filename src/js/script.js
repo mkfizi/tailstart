@@ -1,9 +1,61 @@
 "use strict";
 
-// Execute when document DOM is loaded to make sure site contents are rendered.
-document.addEventListener("DOMContentLoaded", function() {
+// Main app object.
+const app = {
+    /**
+     * Initialize app.
+     */
+    initialize : function() {
+        app.setDarkModeEvent();
+        app.setResizeEvent();
+        app.updateViewportHeight();
+    },
 
     /**
+     * Set dark mode event.
+     */
+    setDarkModeEvent : function() {
+        let darkModeToggle = document.getElementById("darkModeToggle");
+        darkModeToggle.addEventListener("click", function() {
+            app.updateDarkMode();
+        });
+    },
+
+    /**
+     * Set resize event for viewport height fix.
+     */
+    setResizeEvent : function() {
+        window.addEventListener("resize", function() {
+            app.updateViewportHeight;
+        });
+    },
+
+    /**
+     * Update dark mode.
+     */
+    updateDarkMode : function() {
+        app.util.addRemoveTransition();
+        if (localStorage.theme === "light" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: light)").matches)) {
+            localStorage.theme = 'dark';
+            document.documentElement.classList.add("dark");
+        } else if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+            localStorage.theme = 'light';
+            document.documentElement.classList.remove("dark");
+        };
+    },
+
+    /**
+     * Update viewport height.
+     */
+    updateViewportHeight : function() {
+        document.documentElement.style.setProperty("--vh", (window.innerHeight * 0.01) + "px");
+    }
+
+}
+
+// Utility funcition.
+app.util = {
+     /**
      * Add and remove 'transition-none' classes to elements that have any 
      * 'transition' and 'transition-*' classes to avoid any animations effect
      * when toggling dark mode.
@@ -12,43 +64,17 @@ document.addEventListener("DOMContentLoaded", function() {
      * For this to work, make sure 'transition-none' is defined after other
      * 'transition' and 'transition-*' classes in CSS output file.
      */
-    const toggleTransitionNoneAll = () => {
+    addRemoveTransition : function() {
         let transitions = document.querySelectorAll(".transition, .transition-all, .transition-colors, .transition-opacity, .transition-shadow, .transition-transform");
-    
+
         for (let i = 0; i < transitions.length; i++) {
             transitions[i].classList.add("transition-none");
             setTimeout(() => { transitions[i].classList.remove("transition-none"); }, 1000);
         }
     }
+}
 
-    /**
-     * Toggles dark mode. 
-     */
-     const toggleDarkMode = () => {
-        toggleTransitionNoneAll();
-        if (localStorage.theme === "light" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: light)").matches)) {
-            localStorage.theme = 'dark';
-            document.documentElement.classList.add("dark");
-        } else if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-            localStorage.theme = 'light';
-            document.documentElement.classList.remove("dark");
-        };
-    }
-    
-    // Set dark mode toggle event listener.
-    let darkModeToggle = document.getElementById("darkModeToggle");
-    darkModeToggle.addEventListener("click", toggleDarkMode);
-    
-    /**
-     * Viewport height fix for mobile browser.
-     */
-    const fixViewportHeight = () => {
-        document.documentElement.style.setProperty("--vh", (window.innerHeight * 0.01) + "px");
-    }
-
-    // Event listener for viewport fix when resizing from mobile to desktop.
-    window.addEventListener("resize", fixViewportHeight);
-
-    // Trigger viewport fix when first time load.
-    fixViewportHeight();
+// Execute when document DOM is loaded to make sure site contents are rendered.
+document.addEventListener("DOMContentLoaded", function() {
+    app.initialize();
 });
