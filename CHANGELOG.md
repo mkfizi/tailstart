@@ -16,6 +16,11 @@ Types of changes:
 ## [Unreleased]
 Put unreleased changes here.
 
+## [0.1.4] - 2022-12-16
+### Changed
+* Switch method calls to object method call.
+* Scripts to build CSS files.
+
 ## [0.1.3] - 2022-11-11
 ### Changed
 * Method of calling script after document DOM is loaded.
