@@ -1,6 +1,5 @@
 # Prevent files from being pushed to git repository.
 # Extended .gitignore templates: https://github.com/github/gitignore
-
 .cache/
 coverage/
 dist/*
