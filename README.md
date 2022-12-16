@@ -19,7 +19,7 @@ npm install
 
 Use built-in CLI command to build CSS file with TailwindCSS classes.
 ```bash
-npm run tailwind-watch
+npm run build-tailwind
 ```
 
 If you never heard of NPM before, this is the best time to start using it since
