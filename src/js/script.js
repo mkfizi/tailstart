@@ -74,7 +74,8 @@ app.util = {
     }
 }
 
-// Execute when document DOM is loaded to make sure site contents are rendered.
+// Execute when document DOM is loaded to make sure all elements have been
+// completely rendered.
 document.addEventListener("DOMContentLoaded", function() {
     app.initialize();
 });
