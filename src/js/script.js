@@ -69,7 +69,7 @@ app.util = {
 
         for (let i = 0; i < transitions.length; i++) {
             transitions[i].classList.add("transition-none");
-            setTimeout(() => { transitions[i].classList.remove("transition-none"); }, 1000);
+            setTimeout(() => { transitions[i].classList.remove("transition-none"); }, 50);
         }
     }
 }
