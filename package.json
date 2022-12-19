@@ -7,9 +7,10 @@
 	"author": "",
 	"license": "",
 	"scripts": {
-		"build-tailwind": "npx tailwindcss -i ./src/css/input.css -o ./src/css/style.css",
-		"watch-tailwind": "npx tailwindcss -i ./src/css/input.css -o ./src/css/style.css --watch",
-		"build-tailwind-prod": "npx tailwindcss -i ./src/css/input.css -o ./src/css/style.min.css --minify"
+		"build": "npx tailwindcss -i ./src/css/input.css -o ./src/css/style.css",
+		"build-prod": "npx tailwindcss -i ./src/css/input.css -o ./src/css/style.min.css --minify",
+		"watch": "npx tailwindcss -i ./src/css/input.css -o ./src/css/style.css --watch",
+		"watch-prod": "npx tailwindcss -i ./src/css/input.css -o ./src/css/style.min.css --watch --minify"
 	},
 	"devDependencies": {
 		"tailwindcss": "^3.1.3"

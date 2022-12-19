@@ -12,14 +12,14 @@ git clone https://github.com/mkfizi/tailstart.git project-name
 ```
 `project-name` is the name of your project's directory.
 
-Use NPM CLI command to install TailwindCSS dependancies:
+Use NPM CLI command below to install TailwindCSS dependancies:
 ```bash
 npm install
 ```
 
-Use built-in CLI command to build CSS file with TailwindCSS classes.
+Use built-in CLI command below to build CSS file with TailwindCSS classes.
 ```bash
-npm run build-tailwind
+npm run build
 ```
 
 If you never heard of NPM before, this is the best time to start using it since
@@ -57,9 +57,10 @@ Tailstart include some built-in NPM CLI commands which purpose is to build CSS
 file containing TailwindCSS classes that are present in the project. These 
 commands consists as below:
 
-* `npm run tailwind` ─ Run Tailwind CLI and build CSS.
-* `npm run tailwind-watch` ─ Run Tailwind CLI and build CSS in watch mode.
-* `npm run tailwind-build` ─ Run Tailwind CLI and build CSS for production.
+* `npm run build` ─ Execute Tailwind CLI and build CSS.
+* `npm run build-prod` ─ Execute Tailwind CLI and build CSS for production.
+* `npm run watch` ─ Execute Tailwind CLI and build CSS in watch mode.
+* `npm run watch-prod` ─ Execute Tailwind CLI and build CSS in watch mode.
 
 These commands are declared in `package.json` and can be customize according to
 project's path preferences.
