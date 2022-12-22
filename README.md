@@ -58,9 +58,9 @@ file containing TailwindCSS classes that are present in the project. These
 commands consists as below:
 
 * `npm run build` ─ Execute Tailwind CLI and build CSS.
-* `npm run build-prod` ─ Execute Tailwind CLI and build CSS for production.
+* `npm run build:prod` ─ Execute Tailwind CLI and build CSS for production.
 * `npm run watch` ─ Execute Tailwind CLI and build CSS in watch mode.
-* `npm run watch-prod` ─ Execute Tailwind CLI and build CSS in watch mode.
+* `npm run watch:prod` ─ Execute Tailwind CLI and build CSS in watch mode.
 
 These commands are declared in `package.json` and can be customize according to
 project's path preferences.
