@@ -17,11 +17,10 @@ Tailstart is a HTML5 and TailwindCSS boilerplate.
 
 ## Installation
 
-Use git command to download Tailstart:
+Use git command to download Tailstart where `project-name` is the name of your project's directory.
 ```bash 
 git clone https://github.com/mkfizi/tailstart.git project-name
 ```
-`project-name` is the name of your project's directory.
 
 Run below command to install dependencies.
 ```bash
