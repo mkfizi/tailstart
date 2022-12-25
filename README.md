@@ -12,7 +12,7 @@ git clone https://github.com/mkfizi/tailstart.git project-name
 ```
 `project-name` is the name of your project's directory.
 
-Run below command to install dependencies:
+Run below command to install dependencies.
 ```bash
 npm install
 ```
