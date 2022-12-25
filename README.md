@@ -51,7 +51,7 @@ You may refer here for more information about Tailstart's directory structure:
 Although Tailstart is considered as a skeleton template, we include some
 features to help quickstart your next project.
 
-### Built-in CLI Command
+### Built-in CLI commands
 
 Tailstart include some built-in NPM CLI commands which purpose is to build CSS
 file containing TailwindCSS classes that are present in the project. These 
@@ -65,7 +65,7 @@ commands consists as below:
 These commands are declared in `package.json` and can be customize according to
 project's path preferences.
 
-### Dark Mode Toggle
+### Dark mode toggle
 
 Tailstart include a dark mode toggle built using vanilla Javascript which 
 utilizes dark mode feature in TailwindCSS. 
@@ -76,7 +76,7 @@ dark mode theme will uses value according to device's current theme setting.
 
 You may customize dark mode scripts located in `app.js` that suits your need.
 
-### Viewport Fix for Mobile Browsers
+### Viewport fix for mobile browsers
 
 Tailstart include a fix for the notorious [viewport issue on mobile browsers](https://stackoverflow.com/questions/37112218/css3-100vh-not-constant-in-mobile-browser)
 where it calculate the actual browser's viewport and append the value on
@@ -115,7 +115,7 @@ Refer here on how to further customize `tailwind.config.js`:
 Pull requests are welcome. For major changes, please open an issue first to
 discuss what you would like to change.
 
-## Special Thanks
+## Special thanks
 
 This project is hugely inspired by 
 [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate).
