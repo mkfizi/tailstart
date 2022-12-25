@@ -12,7 +12,7 @@ git clone https://github.com/mkfizi/tailstart.git project-name
 ```
 `project-name` is the name of your project's directory.
 
-Run below command to install dependancies:
+Run below command to install dependencies:
 ```bash
 npm install
 ```
@@ -22,9 +22,9 @@ Run below command to build CSS file with TailwindCSS classes.
 npm run build
 ```
 
-That's it. You may begin develop your project with Tailstart. Don't forget to
-remove `.git` folder and then run `git init` should you want to push commits to
-your own repository.
+That's it. You may begin develop to your project with Tailstart. Don't forget
+to remove `.git` folder and then run `git init` should you want to push commits
+to your own repository.
 
 If you never heard of NPM before, this is the best time to start using it since
 modern web development work best with NPM. Refer here for more informations:
