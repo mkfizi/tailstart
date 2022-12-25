@@ -22,13 +22,13 @@ Run below command to build CSS file with TailwindCSS classes.
 npm run build
 ```
 
+That's it. You may begin develop your project with Tailstart. Don't forget to
+remove `.git` folder and then run `git init` should you want to push commits to
+your own repository.
+
 If you never heard of NPM before, this is the best time to start using it since
 modern web development work best with NPM. Refer here for more informations:
 [NPM](https://www.npmjs.com/)
-
-That's it. You may begin develop your project with Tailstart. Dont forget to
-remove `.git` folder and then run `git init` should you want to push commits to
-your own repository.
 
 ## Usage
 
