@@ -12,12 +12,12 @@ git clone https://github.com/mkfizi/tailstart.git project-name
 ```
 `project-name` is the name of your project's directory.
 
-Use NPM CLI command below to install TailwindCSS dependancies:
+Run below command to install dependancies:
 ```bash
 npm install
 ```
 
-Use built-in CLI command below to build CSS file with TailwindCSS classes.
+Run below command to build CSS file with TailwindCSS classes.
 ```bash
 npm run build
 ```
