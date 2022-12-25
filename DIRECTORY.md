@@ -41,7 +41,7 @@ By default, Tailstart directory initially looks as below:
 └── tile-wide.png
 ```
 
-## SRC Folder
+## `src` subdirectory
 
 This folder contains project's CSSs, Javscript and asset related files. For
 starter, it contains `css` and `js` directory. 
@@ -81,7 +81,7 @@ file as a template for creating other pages.
 
 This is the default error page for when the site URL is not existed.
 
-## Configuration Files
+## Configuration files
 
 These are files which purposes are to provide settings for the project.
 
@@ -109,14 +109,14 @@ These are Git related configuration files:
 * `.gitattributes` ─ Track declared files to be pushed to git repository.
 * `.gitignore` ─ Prevent declared files from being pushed to git repository.
 
-### NPM Files
+### NPM files
 
 These are NPM related configuration file:
 
 * `package-lock.json` ─ Contains record of installed package for nnpm registry.
 * `package.json` ─ Contains project informations, scripts and dependancies.
 
-## Favicons and Icons
+## Favicons and jcons
 
 These files are settings related with Favicon and Tile properties which can be 
 replaced and customize accordingly. Standard favicon and icons that are loaded
