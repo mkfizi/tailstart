@@ -57,13 +57,12 @@ Tailstart include some built-in NPM CLI commands which purpose is to build CSS
 file containing TailwindCSS classes that are present in the project. These 
 commands consists as below:
 
-* `npm run build` ─ Execute Tailwind CLI and build CSS.
-* `npm run build:prod` ─ Execute Tailwind CLI and build CSS for production.
-* `npm run watch` ─ Execute Tailwind CLI and build CSS in watch mode.
-* `npm run watch:prod` ─ Execute Tailwind CLI and build CSS in watch mode.
+* `npm run build` ─ Build CSS.
+* `npm run build:prod` ─ Build and minify CSS for production.
+* `npm run watch` ─ Build CSS and watch for changes in real-time.
+* `npm run watch:prod` ─ Build and minift CSS for production and watch for changes in real-time.
 
-These commands are declared in `package.json` and can be customize according to
-project's path preferences.
+These commands are declared in `package.json` and can be customize accordingly.
 
 ### Dark mode toggle
 
