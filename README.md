@@ -115,8 +115,6 @@ Refer here on how to further customize `tailwind.config.js`:
 Pull requests are welcome. For major changes, please open an issue first to
 discuss what you would like to change.
 
-Please make sure to update tests as appropriate.
-
 ## Special Thanks
 
 This project is hugely inspired by 
@@ -128,4 +126,4 @@ And thank you [@adamwathan](https://twitter.com/adamwathan) for creating
 TailwindCSS!
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://github.com/mkfizi/tailstart/blob/main/LICENSE)
