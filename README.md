@@ -4,6 +4,17 @@ Tailstart is a HTML5 and TailwindCSS boilerplate.
 
 [View Demo](https://mkfizi.github.io/tailstart)
 
+### Table of contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+    - [Built-in CLI commands](#built-in-cli-commands)
+    - [Dark mode toggle](#dark-mode-toggle)
+    - [Viewport fix for mobile browsers](#viewport-fix-for-mobile-browsers)
+- [Contributing](#contributing)
+- [Special Thanks](#special-thanks)
+- [License](#license)
+
 ## Installation
 
 Use git command to download Tailstart:
@@ -57,10 +68,10 @@ Tailstart include some built-in NPM CLI commands which purpose is to build CSS
 file containing TailwindCSS classes that are present in the project. These 
 commands consists as below:
 
-* `npm run build` ─ Build CSS.
-* `npm run build:prod` ─ Build and minify CSS for production.
-* `npm run watch` ─ Build CSS and watch for changes in real-time.
-* `npm run watch:prod` ─ Build and minift CSS for production and watch for changes in real-time.
+- `npm run build` ─ Build CSS.
+- `npm run build:prod` ─ Build and minify CSS for production.
+- `npm run watch` ─ Build CSS and watch for changes in real-time.
+- `npm run watch:prod` ─ Build and minift CSS for production and watch for changes in real-time.
 
 These commands are declared in `package.json` and can be customize accordingly.
 
