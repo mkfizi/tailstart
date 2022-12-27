@@ -34,7 +34,7 @@ npm run build
 
 That's it. You may begin to develop your project with Tailstart. Don't forget to remove `.git` folder and then run `git init` should you want to push commits to your own repository.
 
-If you never heard of NPM before, this is the best time to start using it since modern web development work best with NPM. Refer here for more informations:[NPM](https://www.npmjs.com/)
+If you never heard of NPM before, this is the best time to start using it since modern web development work best with NPM. Refer to [NPM](https://www.npmjs.com/) for more informations.
 
 ## Usage
 
@@ -90,7 +90,7 @@ theme: {
 }
 ```
 
-Refer [TailwindCSS Theme Configuration](https://tailwindcss.com/docs/theme) for more informations on how to further customize `tailwind.config.js`.
+Refer to [TailwindCSS Theme Configuration](https://tailwindcss.com/docs/theme) for more informations on how to further customize `tailwind.config.js`.
 
 ## Contributing
 
