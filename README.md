@@ -65,6 +65,7 @@ Tailstart include a fix for the notorious [viewport issue on mobile browsers](ht
 Targeted classes are defined in `tailwind.config.js` by adding `calc(var(--vh, 1vh) * [number])` on defined properties where `[number]` is the number of the viewport height. By default Tailstart append this value on `min-h-screen` and `h-screen` classes.
 
 Here is an on how to extend this feature on other existing or custom classes that uses 'vh' unit on it's properties:
+
 ```
 //tailwind.config.js
 ...
