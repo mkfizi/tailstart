@@ -32,6 +32,11 @@ Run below command to build CSS file with TailwindCSS classes.
 npm run build
 ```
 
+Alternatively, you may run below commands:
+* `npm run build:prod` ─ Build and minify for production.
+* `npm run watch` ─ Build and watch for changes in real time.
+* `npm run watch:prod` ─ Build and minify for production and watch for changes in real time.
+
 That's it. You may begin to develop your project with Tailstart. Don't forget to remove `.git` folder and then run `git init` should you want to push commits to your own repository.
 
 If you never heard of NPM before, this is the best time to start using it since modern web development work best with NPM. Refer to [NPM](https://www.npmjs.com/) for more informations.
@@ -46,17 +51,6 @@ Tailstart does not include bundler tools such as `webpack` or `parcel` since it 
 ## Features
 
 Although Tailstart is considered as a skeleton template, we include some features to help quickstart your next project.
-
-### Built-in CLI commands 
-
-Tailstart include some built-in NPM CLI commands which purpose is to build CSS file containing TailwindCSS classes that are present in the project. These commands consists as below:
-
-- `npm run build` ─ Build CSS.
-- `npm run build:prod` ─ Build and minify CSS for production.
-- `npm run watch` ─ Build CSS and watch for changes in real-time.
-- `npm run watch:prod` ─ Build and minift CSS for production and watch for changes in real-time.
-
-These commands are declared in `package.json` and can be customize accordingly.
 
 ### Dark mode toggle
 
