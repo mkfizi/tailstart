@@ -91,11 +91,11 @@ Refer to [TailwindCSS Theme Configuration](https://tailwindcss.com/docs/theme) f
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-## Special thanks
+## Credits
 
-- This project is hugely inspired by [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate).
-- Icons are from [Tabler Icons](https://tablericons.com/).
-- And thank you [@adamwathan](https://twitter.com/adamwathan) for creating TailwindCSS!
+* This project is hugely inspired by [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate).
+* Icons are from [Tabler Icons](https://tablericons.com/).
+* And thank you [@adamwathan](https://twitter.com/adamwathan) for creating TailwindCSS!
 
 ## License
 [MIT](https://github.com/mkfizi/tailstart/blob/main/LICENSE)
