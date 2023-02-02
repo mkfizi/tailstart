@@ -69,10 +69,14 @@
 
     <!-- Navbar -->
     <nav class="sticky top-0 flex items-center justify-between w-full p-4 transition">
-        <a href="#hero" class="block mb-1 text-base text-blue-600 transition dark:text-blue-400 hover:text-blue-500"><strong>Tailstart</strong></a>
+
+        <!-- Web Title -->
+        <a href="#hero" class="block mb-1 text-lg text-blue-600 transition dark:text-blue-400 hover:text-blue-500"><strong>Tailstart</strong></a>
         
         <div class="flex gap-8">
+            <!-- Nav links -->
             <a href="#features" class="block mb-1 text-base text-blue-600 transition dark:text-blue-400 hover:text-blue-500"><strong>Features</strong></a>
+            <a href="#presets" class="block mb-1 text-base text-blue-600 transition dark:text-blue-400 hover:text-blue-500"><strong>Presets</strong></a>
         
             <!-- Dark mode toggle -->
             <button type="button" id="darkModeToggle" class="flex items-center mb-1" aria-label="Dark Mode Toggle">
@@ -90,25 +94,28 @@
     </nav>
 
     <!-- Content -->
-    <main class="max-w-screen-md px-4 mx-auto">
+    <main class="max-w-screen-md px-4 py-16 mx-auto">
 
         <!-- Hero -->
-        <section id="hero" class="py-24">
+        <section id="hero" class="pt-24 mb-24">
             <div class="mb-2 text-center">
                 <h1 class="mb-1 text-4xl text-blue-600 md:text-6xl dark:text-blue-400"><strong>Hello World</strong></h1>
             </div>
             <div class="mb-8 text-center">
                 <h2 class="mb-1 text-base text-gray-900 dark:text-white">Tailstart is a HTML5 and TailwindCSS boilerplate.</h2>
             </div>
+
         </section>
 
         <!-- Features -->
-        <section id="features" class="pb-8">
+        <section id="features" class="pt-16 mb-8">
             <div class="mb-8 text-center">
-                <p class="mb-1 text-xl font-bold text-blue-600 md:text-3xl dark:text-blue-400">Features</p>
+                <p class="mb-1 text-xl font-bold text-gray-900 md:text-3xl dark:text-white">Features</p>
             </div>
 
             <div class="grid gap-4 md:grid-cols-2">
+
+                <!-- Features: Dark Mode Toggle -->
                 <div class="flex w-full gap-4 p-4 border-2 border-gray-200 rounded-md dark:border-gray-800">
                     <svg xmlns="http://www.w3.org/2000/svg" class="stroke-blue-600 dark:stroke-blue-400" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -146,9 +153,9 @@
                     </svg>
                     <div>
                         <div class="mb-2">
-                            <p class="mb-1 text-base text-blue-600 dark:text-blue-400"><strong>Component Presets</strong></p>
+                            <p class="mb-1 text-base text-blue-600 dark:text-blue-400"><strong>Theme Presets</strong></p>
                         </div>
-                        <p class="mb-1 text-base text-gray-900 dark:text-white">Suggested component preference to quickstart development.</p>
+                        <p class="mb-1 text-base text-gray-900 dark:text-white">Suggested theme preference to quickstart development.</p>
                     </div>
                 </div>
                 <div class="flex w-full gap-4 p-4 border-2 border-gray-200 rounded-md dark:border-gray-800">
@@ -162,7 +169,126 @@
                         <div class="mb-2">
                             <p class="mb-1 text-base text-blue-600 dark:text-blue-400"><strong>Viewport Height Fix</strong></p>
                         </div>
-                        <p class="mb-1 text-base text-gray-900 dark:text-white">Add-on fixes on viewport height issue on mobile browsers.</p>
+                        <p class="mb-1 text-base text-gray-900 dark:text-white">Add-on fixes for viewport height issue on mobile browsers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Presets -->
+        <section id="presets" class="pt-16 mb-8">
+            <div class="mb-8 text-center">
+                <p class="mb-1 text-xl font-bold text-gray-900 md:text-3xl dark:text-white">Presets</p>
+            </div>
+
+            <!-- Text -->
+            <div class="mb-12">
+                <div class="mb-2">
+                    <p class="mb-1 text-lg text-blue-600 dark:text-blue-400"><strong>Text</strong></p>
+                </div>
+
+                <!-- Text: Regular -->
+                <p class="mb-1 text-base text-gray-900 dark:text-white">Regular</p>
+
+                <!-- Text: Bold -->
+                <p class="mb-1 text-base text-gray-900 dark:text-white"><strong>Bold</strong></p>
+                
+                <!-- Text: Bold -->
+                <p class="mb-1 text-base text-gray-900 dark:text-white"><em>Italics</em></p>
+            </div> 
+
+            <!-- Title -->
+            <div class="mb-12">
+                <div class="mb-2">
+                    <p class="mb-1 text-lg text-blue-600 dark:text-blue-400"><strong>Title</strong></p>
+                </div>
+
+                <!-- Title: Small -->
+                <p class="mb-1 text-xl font-bold text-gray-900 md:text-3xl dark:text-white">Small</p>
+
+                <!-- Title: Medium -->
+                <p class="mb-1 text-2xl font-bold text-gray-900 md:text-4xl dark:text-white">Medium</p>
+
+                <!-- Title: Large -->
+                <p class="mb-1 text-3xl font-bold text-gray-900 md:text-5xl dark:text-white">Large</p>
+
+                <!-- Title: Extra Large -->
+                <p class="mb-1 text-4xl font-bold text-gray-900 md:text-6xl dark:text-white">Extra Large</p>
+            </div> 
+
+            <!-- Heading -->
+            <div class="mb-12">
+                <div class="mb-2">
+                    <p class="mb-1 text-lg text-blue-600 dark:text-blue-400"><strong>Heading</strong></p>
+                </div>
+
+                <!-- Heading: Heading 1 -->
+                <h1 class="mb-1 text-4xl text-gray-900 md:text-6xl dark:text-white">Heading 1</h1>
+
+                <!-- Heading: Heading 2 -->
+                <h2 class="mb-1 text-3xl text-gray-900 md:text-5xl dark:text-white">Heading 2</h2>
+
+                <!-- Heading: Heading 3 -->
+                <h3 class="mb-1 text-2xl text-gray-900 md:text-4xl dark:text-white">Heading 3</h3>
+
+                <!-- Heading: Heading 4 -->
+                <h4 class="mb-1 text-xl text-gray-900 md:text-3xl dark:text-white">Heading 4</h4>
+
+                <!-- Heading: Heading 5 -->
+                <h5 class="mb-1 text-lg text-gray-900 md:text-2xl dark:text-white">Heading 5</h5>
+
+                <!-- Heading: Heading 6 -->
+                <h6 class="mb-1 text-base text-gray-900 md:text-xl dark:text-white">Heading 6</h6>
+            </div> 
+
+            <!-- Link -->
+            <div class="mb-12">
+                <div class="mb-4">
+                    <p class="mb-1 text-lg text-blue-600 dark:text-blue-400"><strong>Link</strong></p>
+                </div>
+
+                <!-- Link: Regular -->
+                <a href="#" class="block mb-1 text-base text-blue-600 transition dark:text-blue-400 hover:text-blue-500">Regular link</a>
+
+                <!-- Link: Underline -->
+                <a href="#" class="block mb-1 text-base text-blue-600 underline transition dark:text-blue-400 hover:text-blue-500">Underline link</a>
+            </div> 
+
+            <!-- List -->
+            <div class="mb-12">
+                <div class="mb-2">
+                    <p class="mb-1 text-lg text-blue-600 dark:text-blue-400"><strong>List</strong></p>
+                </div>
+
+                <div class="grid w-full grid-cols-1 gap-4 sm:gap-8 sm:grid-cols-3">
+                    <!-- List: List None -->
+                    <div>
+                        <p class="mb-1 text-base font-bold text-gray-900 dark:text-white"><strong>Regular List</strong></p>
+                        <ul class="mb-1 text-base text-gray-900 list-none dark:text-white">
+                            <li>Item One</li>
+                            <li>Item Two</li>
+                            <li>Item Three</li>
+                        </ul>
+                    </div>
+
+                    <!-- List: List Disc -->
+                    <div>
+                        <p class="mb-1 text-base font-bold text-gray-900 dark:text-white"><strong>Disc List</strong></p>
+                        <ul class="mb-1 ml-4 text-base text-gray-900 list-disc dark:text-white">
+                            <li>Item One</li>
+                            <li>Item Two</li>
+                            <li>Item Three</li>
+                        </ul>
+                    </div>
+
+                    <!-- ! List Decimal -->
+                    <div>
+                        <p class="mb-1 text-base font-bold text-gray-900 dark:text-white"><strong>Decimal List</strong></p>
+                        <ul class="mb-1 ml-4 text-base text-gray-900 list-decimal dark:text-white">
+                            <li>Item One</li>
+                            <li>Item Two</li>
+                            <li>Item Three</li>
+                        </ul>
                     </div>
                 </div>
             </div>
