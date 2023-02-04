@@ -63,7 +63,7 @@ Tailstart include a navbar handler built using vanilla Javascript to handle navb
 
 ### Style presets
 
-Tailstart include style preset preferences to help jumpstart your project. Current style preset are as below:
+Tailstart include style preset preferences for rapid prototype development. Current style preset are as below:
 * Text
 * Title
 * Heading
