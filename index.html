@@ -70,21 +70,21 @@
     <!-- Navbar -->
     <nav class="sticky top-0 flex items-center justify-between w-full p-4 transition">
 
-        <!-- Web Title -->
-        <a href="#hero" class="block mb-1 text-lg text-blue-600 transition dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-500"><strong>Tailstart</strong></a>
+        <!-- Nav title -->
+        <a href="index" class="mb-1 text-base text-blue-700 transition dark:text-blue-500 dark:hover:text-blue-700 hover:text-blue-500"><strong class="text-lg">Tailstart</strong></a>
         
-        <div class="flex gap-8">
+        <div class="flex gap-4 md:gap-8">
             <!-- Nav links -->
-            <a href="#features" class="block mb-1 text-base text-blue-600 transition dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-500"><strong>Features</strong></a>
-            <a href="#presets" class="block mb-1 text-base text-blue-600 transition dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-500"><strong>Presets</strong></a>
+            <a href="#features" class="mb-1 text-base text-blue-700 transition dark:text-blue-500 dark:hover:text-blue-700 hover:text-blue-500"><strong>Features</strong></a>
+            <a href="#presets" class="mb-1 text-base text-blue-700 transition dark:text-blue-500 dark:hover:text-blue-700 hover:text-blue-500"><strong>Presets</strong></a>
         
             <!-- Dark mode toggle -->
             <button type="button" id="darkModeToggle" class="flex items-center mb-1" aria-label="Dark Mode Toggle">
-                <svg xmlns="http://www.w3.org/2000/svg" class="transition stroke-blue-600 fill-blue-600 hover:stroke-blue-500 hover:fill-blue-500 dark:hidden" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" class="transition stroke-blue-700 fill-blue-700 hover:stroke-blue-500 hover:fill-blue-500 dark:hidden" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                     <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
                 </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" class="hidden stroke-blue-400 fill-blue-400 hover:stroke-blue-500 hover:fill-blue-500 dark:block" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" class="hidden stroke-blue-500 fill-blue-500 hover:stroke-blue-700 hover:fill-blue-700 dark:block" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                     <circle cx="12" cy="12" r="4" />
                     <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
@@ -99,8 +99,10 @@
         <!-- Hero -->
         <section id="hero" class="pt-24 mb-24">
             <div class="mb-2 text-center">
-                <h1 class="mb-1 text-4xl text-blue-600 md:text-6xl dark:text-blue-400"><strong>Hello World</strong></h1>
+                <h1 class="mb-1 text-4xl text-blue-600 dark:text-blue-400 md:text-5xl xl:text-6xl"><strong>Hello World</strong></h1>
             </div>
+
+            
             <div class="mb-8 text-center">
                 <h2 class="mb-1 text-base text-gray-900 dark:text-white">Tailstart is a HTML5 and TailwindCSS boilerplate.</h2>
             </div>
@@ -110,7 +112,7 @@
         <!-- Features -->
         <section id="features" class="pt-16 mb-8">
             <div class="mb-8 text-center">
-                <p class="mb-1 text-xl font-bold text-gray-900 md:text-3xl dark:text-white">Features</p>
+                <p class="mb-1 text-xl font-bold text-blue-600 md:text-3xl dark:text-blue-400">Features</p>
             </div>
 
             <div class="grid gap-4 md:grid-cols-2">
@@ -184,7 +186,7 @@
         <!-- Presets -->
         <section id="presets" class="pt-16 mb-8">
             <div class="mb-8 text-center">
-                <p class="mb-1 text-xl font-bold text-gray-900 md:text-3xl dark:text-white">Presets</p>
+                <p class="mb-1 text-xl font-bold text-blue-600 md:text-3xl dark:text-blue-400">Presets</p>
             </div>
 
             <!-- Text -->
@@ -210,16 +212,16 @@
                 </div>
 
                 <!-- Title: Small -->
-                <p class="mb-1 text-xl font-bold text-gray-900 md:text-3xl dark:text-white">Small</p>
+                <p class="mb-1 text-xl font-bold text-gray-900 xl:text-3xl dark:text-white">Small</p>
 
                 <!-- Title: Medium -->
-                <p class="mb-1 text-2xl font-bold text-gray-900 md:text-4xl dark:text-white">Medium</p>
+                <p class="mb-1 text-2xl font-bold text-gray-900 xl:text-4xl dark:text-white">Medium</p>
 
                 <!-- Title: Large -->
-                <p class="mb-1 text-3xl font-bold text-gray-900 md:text-5xl dark:text-white">Large</p>
+                <p class="mb-1 text-3xl font-bold text-gray-900 xl:text-5xl dark:text-white">Large</p>
 
                 <!-- Title: Extra Large -->
-                <p class="mb-1 text-4xl font-bold text-gray-900 md:text-6xl dark:text-white">Extra Large</p>
+                <p class="mb-1 text-4xl font-bold text-gray-900 xl:text-6xl dark:text-white">Extra Large</p>
             </div> 
 
             <!-- Heading -->
@@ -254,10 +256,14 @@
                 </div>
 
                 <!-- Link: Regular -->
-                <a href="#" class="block mb-1 text-base text-blue-600 transition dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-500">Regular link</a>
+                <div>
+                    <a href="#" class="inline-block mb-1 text-base text-blue-700 transition dark:text-blue-500 dark:hover:text-blue-700 hover:text-blue-500">Regular link</a>
+                </div>
 
                 <!-- Link: Underline -->
-                <a href="#" class="block mb-1 text-base text-blue-600 underline transition dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-500">Underline link</a>
+                <div>
+                    <a href="#" class="inline-block mb-1 text-base text-blue-700 underline transition dark:text-blue-500 dark:hover:text-blue-700 hover:text-blue-500">Underline link</a>
+                </div>
             </div> 
 
             <!-- List -->
@@ -267,6 +273,7 @@
                 </div>
 
                 <div class="grid w-full grid-cols-1 gap-4 sm:gap-8 sm:grid-cols-3">
+                    
                     <!-- List: List None -->
                     <div>
                         <p class="mb-1 text-base font-bold text-gray-900 dark:text-white"><strong>Regular List</strong></p>
@@ -299,6 +306,33 @@
                 </div>
             </div>
 
+            <!-- Badge -->
+            <div class="mb-12">
+                <div class="mb-4">
+                    <p class="mb-1 text-lg text-blue-600 dark:text-blue-400"><strong>Badge</strong></p>
+                </div>
+
+                <!-- Badge -->
+                <div>
+                    <span class="inline-block px-2 py-px mb-1 text-sm font-semibold text-blue-700 bg-blue-100 rounded dark:bg-blue-900 dark:text-blue-100">
+                        Badge
+                    </span>
+                </div>
+            </div> 
+
+            <!-- Button -->
+            <div class="mb-12">
+                <div class="mb-4">
+                    <p class="mb-1 text-lg text-blue-600 dark:text-blue-400"><strong>Button</strong></p>
+                </div>
+
+                <p class="mb-1 text-base font-bold text-gray-900 dark:text-white"><strong>Regular</strong></p>
+
+                <!-- Button: Regular -->
+                <button type="button" class="h-10 px-6 py-2 mb-1 text-sm font-semibold text-white transition bg-blue-600 border border-blue-600 rounded hover:bg-blue-700 hover:border-blue-700 disabled:bg-blue-300 disabled:border-blue-300 disabled:pointer-events-none">Button</button>
+
+                <!-- Button: Outline -->
+            </div>
             
         </section>
 
