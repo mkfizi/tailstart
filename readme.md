@@ -5,15 +5,16 @@ Tailstart is a HTML5 and TailwindCSS boilerplate.
 [View Demo](https://mkfizi.github.io/tailstart)
 
 ### Table of contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [Features](#features)
-    - [Built-in CLI commands](#built-in-cli-commands)
-    - [Dark mode toggle](#dark-mode-toggle)
-    - [Viewport fix for mobile browsers](#viewport-fix-for-mobile-browsers)
-- [Contributing](#contributing)
-- [Special Thanks](#special-thanks)
-- [License](#license)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Features](#features)
+    * [Dark mode toggle](#dark-mode-toggle)
+    * [Navbar handler](#navbar-handler)
+    * [Style presets](#style-presets)
+    * [Viewport height fix](#viewport-height-fix)
+* [Contributing](#contributing)
+* [Special Thanks](#special-thanks)
+* [License](#license)
 
 ## Installation
 
@@ -50,17 +51,31 @@ Tailstart does not include bundler tools such as `webpack` or `parcel` since it 
 
 ## Features
 
-Although Tailstart is considered as a skeleton template, we include some features to help quickstart your next project.
+Although Tailstart is a skeleton template, we include some features to help quickstart your next project.
 
 ### Dark mode toggle
 
-Tailstart include a dark mode toggle built using vanilla Javascript to toggle dark mode feature in TailwindCSS. Dark mode theme switches between value of `theme` key stored in browser's `localstorage`. If the key is not existed when the site is loaded for the first time, dark mode theme will uses value according to device's current theme setting.
+Tailstart include a dark mode toggle built using vanilla Javascript to toggle dark mode feature in TailwindCSS. Dark mode theme switches between value of `theme` key stored in browser's `localstorage`. If the key is not existed when the site is loaded for the first time, dark mode theme will create a value according to device's current theme setting.
 
-You may customize dark mode scripts located in `app.js` that suits your need.
+### Navbar handler
 
-### Viewport fix for mobile browsers
+Tailstart include a navbar handler built using vanilla Javascript to handle navbar appearance. This handler uses window `onscroll` event to toggle navbar classes based on window's current scroll position.
 
-Tailstart include a fix for the notorious [viewport issue on mobile browsers](https://stackoverflow.com/questions/37112218/css3-100vh-not-constant-in-mobile-browser) where it calculate the actual browser's viewport and append the value on targeted classes that use 'vh' unit on it's properties.
+### Style presets
+
+Tailstart include style preset preferences to help jumpstart your project. Current style preset are as below:
+* Text
+* Title
+* Heading
+* Link
+* List
+* Blockquote
+* Badge
+* Button
+
+### Viewport height fix
+
+Tailstart include a fix for the notorious [viewport height issue on mobile browsers](https://stackoverflow.com/questions/37112218/css3-100vh-not-constant-in-mobile-browser) where it calculate actual browser's viewport and append the value on targeted classes that use 'vh' unit on it's properties.
 
 Targeted classes are defined in `tailwind.config.js` by adding `calc(var(--vh, 1vh) * [number])` on defined properties where `[number]` is the number of the viewport height. By default Tailstart append this value on `min-h-screen` and `h-screen` classes.
 
