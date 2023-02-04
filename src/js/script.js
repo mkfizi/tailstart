@@ -6,28 +6,46 @@ const app = {
      * Initialize app.
      */
     initialize : function() {
-        app.setDarkModeEvent();
-        app.setResizeEvent();
+        app.setEvents();
         app.updateViewportHeight();
+        app.updateNavbar();
     },
 
     /**
-     * Set dark mode event.
+     * Set events.
      */
-    setDarkModeEvent : function() {
+    setEvents : function() {
+        // Set resize event for viewport height fix.
+        window.addEventListener("resize", app.updateViewportHeight);
+
+        // Set navbar toggle event listener.
+        window.addEventListener("scroll", app.updateNavbar);
+
+        // Set dark mode event.
         let darkModeToggle = document.getElementById("darkModeToggle");
         darkModeToggle.addEventListener("click", function() {
             app.updateDarkMode();
-        });
+        }); 
+
     },
 
     /**
-     * Set resize event for viewport height fix.
+     * Update viewport height.
      */
-    setResizeEvent : function() {
-        window.addEventListener("resize", function() {
-            app.updateViewportHeight;
-        });
+    updateViewportHeight : function() {
+        document.documentElement.style.setProperty("--vh", (window.innerHeight * 0.01) + "px");
+    },
+
+    /**
+     * Update navbar.
+     */
+    updateNavbar : function() {
+        const navbar = document.getElementById("navbar");
+        if (window.pageYOffset > (navbar.offsetHeight - navbar.clientHeight)) {
+            navbar.classList.add('bg-white', 'dark:bg-neutral-800', 'shadow');
+        } else {
+            navbar.classList.remove('bg-white', 'dark:bg-neutral-800', 'shadow');
+        }
     },
 
     /**
@@ -42,15 +60,7 @@ const app = {
             localStorage.theme = 'light';
             document.documentElement.classList.remove("dark");
         };
-    },
-
-    /**
-     * Update viewport height.
-     */
-    updateViewportHeight : function() {
-        document.documentElement.style.setProperty("--vh", (window.innerHeight * 0.01) + "px");
     }
-
 }
 
 // Utility funcition.
