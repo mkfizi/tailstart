@@ -16,6 +16,17 @@ Types of changes:
 ## [Unreleased]
 Put unreleased changes here.
 
+### Added
+* Smooth scroll behaviour.
+* Navbar handler.
+* Typography presets.
+
+### Changed
+* Content width from using `container` to `max-w-screen-md`.
+* Base theme color from "gray" to "blue".
+* 404 page content to follow typography presets.
+* Update `readme.md` to include new features descriptions.
+
 ## [0.1.4] - 2022-12-16
 ### Changed
 * Switch method calls to object method call.
