@@ -16,6 +16,19 @@ Types of changes:
 ## [Unreleased]
 Put unreleased changes here.
 
+## [0.2.1] - 2023-02-08
+### Added
+* Script to create Tailstart archive file.
+* Tailstart zip file.
+* Tailstart download link in `index.html`.
+
+### Changed
+* `README.md` to include Tailstart zip file.
+* Refine code and comments in `script.js`.
+
+### Removed
+* Readme link in `index.html`.
+
 ## [0.2.0] - 2023-02-04
 ### Added
 * Smooth scroll behaviour.
