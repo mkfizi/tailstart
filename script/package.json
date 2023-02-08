@@ -1,8 +1,7 @@
 {
-  "name": "archive",
-  "version": "1.0.0",
+  "name": "tailstart",
+  "version": "0.2.1",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "build": "node ./archiver.js",
     "watch": "node ./watcher.js"
