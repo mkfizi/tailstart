@@ -1,45 +1,44 @@
+/**
+ * --------------------------------------------------------------------------
+ * Tailstart (v0.2.1): alert.js
+ * Licensed under MIT (https://github.com/mkfizi/tailstart/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
 "use strict";
 
-// Main app object.
 const app = {
     /**
-     * Initialize app.
+     * Initialize the app by setting events and updating the viewport and navbar.
      */
-    initialize : function() {
+    initialize: function() {
         app.setEvents();
         app.updateViewportHeight();
         app.updateNavbar();
     },
 
     /**
-     * Set events.
+     * Set the events for resizing and scrolling the window, and for toggling dark mode.
      */
-    setEvents : function() {
-        // Set resize event for viewport height fix.
+    setEvents: function() {
         window.addEventListener("resize", app.updateViewportHeight);
-
-        // Set navbar toggle event listener.
         window.addEventListener("scroll", app.updateNavbar);
 
-        // Set dark mode event.
-        let darkModeToggle = document.getElementById("darkModeToggle");
-        darkModeToggle.addEventListener("click", function() {
-            app.updateDarkMode();
-        }); 
-
+        const darkModeToggle = document.getElementById("darkModeToggle");
+        darkModeToggle.addEventListener("click", this.updateDarkMode); 
     },
 
     /**
-     * Update viewport height.
+     * Update the height of the viewport.
      */
-    updateViewportHeight : function() {
+    updateViewportHeight: function() {
         document.documentElement.style.setProperty("--vh", (window.innerHeight * 0.01) + "px");
     },
 
     /**
-     * Update navbar.
+     * Update the navbar's appearance based on scrolling.
      */
-    updateNavbar : function() {
+    updateNavbar: function() {
         const navbar = document.getElementById("navbar");
         if (window.pageYOffset > (navbar.offsetHeight - navbar.clientHeight)) {
             navbar.classList.add('bg-white', 'dark:bg-neutral-800', 'shadow');
@@ -49,7 +48,7 @@ const app = {
     },
 
     /**
-     * Update dark mode.
+     * Toggle between light and dark mode.
      */
     updateDarkMode : function() {
         app.util.addRemoveTransition();
@@ -61,31 +60,25 @@ const app = {
             document.documentElement.classList.remove("dark");
         };
     }
-}
+};
 
-// Utility funcition.
+// Helper functions for the app.
 app.util = {
-     /**
-     * Add and remove 'transition-none' classes to elements that have any 
-     * 'transition' and 'transition-*' classes to avoid any animations effect
-     * when toggling dark mode.
+    /**
+     * Add and then remove a transition effect to prevent FOUC.
      * 
-     * NOTE: 
-     * For this to work, make sure 'transition-none' is defined after other
+     * Note:
+     * For this to work, make sure 'transition-none' is defined after
      * 'transition' and 'transition-*' classes in CSS output file.
      */
-    addRemoveTransition : function() {
-        let transitions = document.querySelectorAll(".transition, .transition-all, .transition-colors, .transition-opacity, .transition-shadow, .transition-transform");
-
-        for (let i = 0; i < transitions.length; i++) {
-            transitions[i].classList.add("transition-none");
-            setTimeout(() => { transitions[i].classList.remove("transition-none"); }, 50);
-        }
+    addRemoveTransition: function() {
+        const transitions = document.querySelectorAll(".transition, .transition-all, .transition-colors, .transition-opacity, .transition-shadow, .transition-transform");
+        transitions.forEach(function(transition) {
+            transition.classList.add("transition-none");
+            setTimeout(function(){ transition.classList.remove("transition-none"); }, 50);
+        });
     }
-}
+};
 
-// Execute when document DOM is loaded to make sure all elements have been
-// completely rendered.
-document.addEventListener("DOMContentLoaded", function() {
-    app.initialize();
-});
+// Initialize the app once the DOM is loaded
+document.addEventListener("DOMContentLoaded", app.initialize);
