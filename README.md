@@ -5,6 +5,7 @@ Tailstart is a HTML5 and TailwindCSS boilerplate.
 [View Demo](https://mkfizi.github.io/tailstart)
 
 ### Table of contents
+* [Download](#download)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Features](#features)
@@ -16,12 +17,14 @@ Tailstart is a HTML5 and TailwindCSS boilerplate.
 * [Special Thanks](#special-thanks)
 * [License](#license)
 
+
+## Download
+
+Click [here](https://github.com/mkfizi/tailstart/raw/main/tailstart.zip) to download Tailstart and unzip it's content to your project directory.
+
 ## Installation
 
-Use git command to download Tailstart where `project-name` is the name of your project's directory.
-```bash 
-git clone https://github.com/mkfizi/tailstart.git project-name
-```
+Make sure NodeJs and NPM are installed on your machine before you proceed.
 
 Run below command to install dependencies.
 ```bash
@@ -39,8 +42,6 @@ Alternatively, you may run below commands:
 * `npm run watch:prod` ─ Build and minify for production and watch for changes in real time.
 
 That's it. You may begin to develop your project with Tailstart. Don't forget to remove `.git` folder and then run `git init` should you want to push commits to your own repository.
-
-If you never heard of NPM before, this is the best time to start using it since modern web development work best with NPM. Refer to [NPM](https://www.npmjs.com/) for more informations.
 
 ## Usage
 
