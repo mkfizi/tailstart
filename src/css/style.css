@@ -538,6 +538,11 @@ video {
   margin-right: auto;
 }
 
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -805,6 +810,10 @@ video {
   font-weight: 600;
 }
 
+.leading-4 {
+  line-height: 1rem;
+}
+
 .text-gray-900 {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
@@ -1041,6 +1050,10 @@ body{
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
+
+  .sm\:leading-4 {
+    line-height: 1rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1108,6 +1121,10 @@ body{
   .lg\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .lg\:leading-4 {
+    line-height: 1rem;
   }
 }
 

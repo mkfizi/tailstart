@@ -17,6 +17,9 @@ Types of changes:
 Put unreleased changes here.
 
 ## [0.2.2] - 2023-03-07
+### Added
+* Line height classes on h2.
+
 ### Changed
 * h1 text.
 * Tailstart description.
