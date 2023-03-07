@@ -1,6 +1,6 @@
 {
-  "name": "tailstart",
-  "version": "0.2.1",
+  "name": "tailstart-script",
+  "version": "0.2.2",
   "description": "",
   "scripts": {
     "build": "node ./archiver.js",

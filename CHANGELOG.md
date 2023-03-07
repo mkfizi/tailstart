@@ -16,6 +16,10 @@ Types of changes:
 ## [Unreleased]
 Put unreleased changes here.
 
+## [0.2.2] - 2023-03-07
+### Changed
+* Tailstart description.
+
 ## [0.2.1] - 2023-02-08
 ### Added
 * Script to create Tailstart archive file.

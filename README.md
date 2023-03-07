@@ -1,6 +1,6 @@
 # Tailstart
 
-Tailstart is a HTML5 and TailwindCSS boilerplate.
+HTML5 and TailwindCSS boilerplate with styled presets.
 
 [View Demo](https://mkfizi.github.io/tailstart)
 
@@ -16,7 +16,6 @@ Tailstart is a HTML5 and TailwindCSS boilerplate.
 * [Contributing](#contributing)
 * [Special Thanks](#special-thanks)
 * [License](#license)
-
 
 ## Download
 
