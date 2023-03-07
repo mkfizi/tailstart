@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Tailstart (v0.1.5): script.js
+ * Tailstart (v0.2.2): script.js
  * Licensed under MIT (https://github.com/mkfizi/tailstart/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */

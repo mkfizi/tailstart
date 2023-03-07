@@ -19,6 +19,7 @@ Put unreleased changes here.
 ## [0.2.2] - 2023-03-07
 ### Changed
 * Tailstart description.
+* Switch breakpoint from `md:` to `sm:` and from `xl:` to `lg:`.
 
 ## [0.2.1] - 2023-02-08
 ### Added
@@ -44,10 +45,6 @@ Put unreleased changes here.
 * Base theme color from "gray" to "blue".
 * 404 page content to follow style presets.
 * Update `readme.md` to include new features descriptions.
-
-## [0.1.5] - 2023-03-08
-### Changed
-* Switch breakpoint from `md:` to `sm:` and from `xl:` to `lg:`.
 
 ## [0.1.4] - 2022-12-16
 ### Changed
