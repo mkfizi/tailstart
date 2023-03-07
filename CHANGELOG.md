@@ -18,6 +18,7 @@ Put unreleased changes here.
 
 ## [0.2.2] - 2023-03-07
 ### Changed
+* h1 text.
 * Tailstart description.
 * Switch breakpoint from `md:` to `sm:` and from `xl:` to `lg:`.
 
