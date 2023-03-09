@@ -24,6 +24,7 @@ Put unreleased changes here.
 * h1 text.
 * Tailstart description.
 * Switch breakpoint from `md:` to `sm:` and from `xl:` to `lg:`.
+* Switch element margin rule priority from `margin-bottom` to `margin-top`.
 
 ## [0.2.1] - 2023-02-08
 ### Added
