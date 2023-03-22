@@ -8,12 +8,14 @@ const exec = require("child_process").exec;
 // The root directory to watch for changes.
 const root = __dirname + "/../";
 
-// The list of excluded subdirectories or files.
+// Specify files and subdirectories to exclude from the archive.
 const exclude = [
 	".git",
-    "node_modules",
     "script",
-	"tailstart.zip"
+	".DS_Store",
+	"*/.DS_Store",
+    "node_modules",
+	"tailstart.zip",
 ];
 
 // Main function to watch files.
@@ -39,7 +41,7 @@ const exclude = [
 })();
 
 /**
- * Execute the 'node zip.js' command.
+ * Execute 'node archiver.js' command.
  */
 function runArchiverJs() {
 	exec("node archiver.js", (error) => {

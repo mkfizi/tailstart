@@ -9,12 +9,14 @@ const glob = require("glob");
 const root = __dirname + "/../";
 const outputDir = root;
 
-// Specify directories to exclude from the archive.
+// Specify files and subdirectories to exclude from the archive.
 const exclude = [
-    ".git/**",
-    "node_modules/**",
-    "script/**",
-    "tailstart.zip",
+	".git",
+    "script",
+	".DS_Store",
+	"*/.DS_Store",
+    "node_modules",
+	"tailstart.zip",
 ];
 
 // Main function to create archive.

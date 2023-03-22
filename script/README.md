@@ -2,7 +2,7 @@
 
 This subdirectory consists of utility scripts that are used to compile Tailstart files as a single archive file to be released to public.
 
-## Installation
+## Usage
 
 You may refer below steps to modify and execute source code. Make sure NodeJs and NPM are installed on your machine before you proceed.
 
