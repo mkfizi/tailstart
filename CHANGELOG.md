@@ -19,6 +19,8 @@ Put unreleased changes here.
 ## [0.2.3] - 2023-03-27
 ### Changed
 * Traditional function to arrow function in favor of minimalist codes.
+* `input.css` to `style.css` and css output filename as `app.css`.
+* `script.js` to `app.js`.
 
 ### Fixed
 * `updateDarkMode` method call from `this` to `app`.
