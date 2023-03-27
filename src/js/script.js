@@ -11,7 +11,7 @@ const app = {
     /**
      * Initialize the app by setting events and updating the viewport and navbar.
      */
-    initialize: function() {
+    initialize: () => {
         app.setEvents();
         app.updateViewportHeight();
         app.updateNavbar();
@@ -20,7 +20,7 @@ const app = {
     /**
      * Set the events for resizing and scrolling the window, and for toggling dark mode.
      */
-    setEvents: function() {
+    setEvents: () => {
         window.addEventListener("resize", app.updateViewportHeight);
         window.addEventListener("scroll", app.updateNavbar);
 
@@ -31,26 +31,24 @@ const app = {
     /**
      * Update the height of the viewport.
      */
-    updateViewportHeight: function() {
+    updateViewportHeight: () => {
         document.documentElement.style.setProperty("--vh", (window.innerHeight * 0.01) + "px");
     },
 
     /**
      * Update the navbar's appearance based on scrolling.
      */
-    updateNavbar: function() {
+    updateNavbar: () => {
         const navbar = document.getElementById("navbar");
-        if (window.pageYOffset > (navbar.offsetHeight - navbar.clientHeight)) {
-            navbar.classList.add('bg-white', 'dark:bg-neutral-800', 'shadow');
-        } else {
-            navbar.classList.remove('bg-white', 'dark:bg-neutral-800', 'shadow');
-        }
+            (window.pageYOffset > (navbar.offsetHeight - navbar.clientHeight))
+                ? navbar.classList.add('bg-white', 'dark:bg-neutral-800', 'shadow')
+                : navbar.classList.remove('bg-white', 'dark:bg-neutral-800', 'shadow');
     },
 
     /**
      * Toggle between light and dark mode.
      */
-    updateDarkMode : function() {
+    updateDarkMode : () => {
         app.util.addRemoveTransition();
         if (localStorage.theme === "light" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: light)").matches)) {
             localStorage.theme = 'dark';
@@ -71,11 +69,11 @@ app.util = {
      * For this to work, make sure 'transition-none' is defined after
      * 'transition' and 'transition-*' classes in CSS output file.
      */
-    addRemoveTransition: function() {
+    addRemoveTransition: () => {
         const transitions = document.querySelectorAll(".transition, .transition-all, .transition-colors, .transition-opacity, .transition-shadow, .transition-transform");
-        transitions.forEach(function(transition) {
+        transitions.forEach(transition => {
             transition.classList.add("transition-none");
-            setTimeout(function(){ transition.classList.remove("transition-none"); }, 50);
+            setTimeout(() =>{ transition.classList.remove("transition-none"); }, 50);
         });
     }
 };

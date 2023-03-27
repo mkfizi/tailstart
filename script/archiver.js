@@ -20,7 +20,7 @@ const exclude = [
 ];
 
 // Main function to create archive.
-(function() {
+(() => {
     // Create file stream for archive output.
     const output = fs.createWriteStream(outputDir + "/tailstart.zip");
 
@@ -43,24 +43,19 @@ const exclude = [
     let outputFiles = {}
 
     // Insert each files into "outputFiles" object.
-    files.forEach(function(file) { 
+    files.forEach(file => { 
         const filePath = `${root}/${file}`;
 
         // Proceed loop if file is not a directory.
-        if (!fs.statSync(filePath).isDirectory()) {
-            outputFiles[filePath] = `${file}`;
-        }
+        if (!fs.statSync(filePath).isDirectory()) outputFiles[filePath] = `${file}`;
     });
 
     // Create output zip directory if its not exist.
-    if (!fs.existsSync(outputDir)){
-        fs.mkdirSync(outputDir);
-    }
+    if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir);
     
     // Archive files from "outputFiles" object.
-    for (const [path, file] of Object.entries(outputFiles)) {
-        archive.file(path, { name: file });
-    }
+    for (const [path, file] of Object.entries(outputFiles)) archive.file(path, { name: file });
+    
     // Finalize the archive (end the stream).
     archive.finalize();
 })();

@@ -18,8 +18,21 @@ const exclude = [
 	"tailstart.zip",
 ];
 
+/**
+ * Execute 'node archiver.js' command.
+ */
+const runArchiverJs = () => {
+	exec("node archiver.js", (error) => {
+		// Log any errors that occurred during the command execution.
+		if (error) {
+			console.error(`exec error: ${error}`);
+			return;
+		}
+	});
+}
+
 // Main function to watch files.
-(function() {
+(() => {
 	runArchiverJs();
 	
 	// Watch for changes in the root directory, including subdirectories.
@@ -39,16 +52,3 @@ const exclude = [
 	// Log a message indicating that the watcher has started.
 	console.log(`Watching ${root} for changes...`);
 })();
-
-/**
- * Execute 'node archiver.js' command.
- */
-function runArchiverJs() {
-	exec("node archiver.js", (error) => {
-		// Log any errors that occurred during the command execution.
-		if (error) {
-			console.error(`exec error: ${error}`);
-			return;
-		}
-	});
-}
