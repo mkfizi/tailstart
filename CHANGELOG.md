@@ -16,6 +16,10 @@ Types of changes:
 ## [Unreleased]
 Put unreleased changes here.
 
+## [0.2.3] - 2023-03-27
+### Changed
+* Traditional function to arrow function in favor of minimalist codes.
+
 ## [0.2.2] - 2023-03-07
 ### Added
 * Line height classes on h2.
