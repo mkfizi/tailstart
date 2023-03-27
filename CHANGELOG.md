@@ -20,6 +20,9 @@ Put unreleased changes here.
 ### Changed
 * Traditional function to arrow function in favor of minimalist codes.
 
+### Fixed
+* `updateDarkMode` method call from `this` to `app`.
+
 ## [0.2.2] - 2023-03-07
 ### Added
 * Line height classes on h2.

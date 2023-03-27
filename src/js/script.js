@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Tailstart (v0.2.2): script.js
+ * Tailstart (v0.2.3): script.js
  * Licensed under MIT (https://github.com/mkfizi/tailstart/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -25,7 +25,7 @@ const app = {
         window.addEventListener("scroll", app.updateNavbar);
 
         const darkModeToggle = document.getElementById("darkModeToggle");
-        darkModeToggle.addEventListener("click", this.updateDarkMode); 
+        darkModeToggle.addEventListener("click", app.updateDarkMode); 
     },
 
     /**
@@ -48,7 +48,8 @@ const app = {
     /**
      * Toggle between light and dark mode.
      */
-    updateDarkMode : () => {
+    updateDarkMode: () => {
+        console.log('tests')
         app.util.addRemoveTransition();
         if (localStorage.theme === "light" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: light)").matches)) {
             localStorage.theme = 'dark';
