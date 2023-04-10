@@ -94,258 +94,269 @@
     </nav>
 
     <!-- Content -->
-    <main class="max-w-screen-md px-4 py-16 mx-auto">
+    <main class="container px-4 py-16 mx-auto">
+        <div class="max-w-screen-md mx-auto">
+            
+            <!-- Hero -->
+            <header id="hero" class="mt-32 text-center">
+                <h1 class="text-4xl text-blue-600 dark:text-blue-400 md:text-5xl xl:text-6xl"><strong>Quickstart TailwindCSS</strong></h1>
+                <h2 class="mt-8 text-base">Ready made HTML and TailwindCSS boilerplate with stylized UI presets for rapid web development.</h2>
+                <div class="flex justify-center gap-4 mt-16">
+                    <a href="https://github.com/mkfizi/tailstart/raw/main/tailstart.zip" target="_blank" class="inline-block px-4 py-2 text-base font-semibold text-white transition bg-blue-600 border border-blue-600 rounded hover:bg-blue-700 hover:border-blue-700">
+                        <span class="flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                                <polyline points="7 11 12 16 17 11" />
+                                <line x1="12" y1="4" x2="12" y2="16" />
+                            </svg>
+                            <span>Download</span>
+                        </span>
+                    </a>
+                    <a href="https://github.com/mkfizi/tailstart" target="_blank" class="inline-block px-4 py-2 text-base font-semibold text-blue-600 transition bg-transparent border border-blue-600 rounded dark:border-blue-500 dark:text-blue-500 dark:hover:bg-blue-700 hover:bg-blue-700 hover:text-white dark:hover:border-blue-700 dark:hover:text-white hover:border-blue-700">
+                        <span class="flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                            </svg>
+                            <span>Github</span>
+                        </span>
+                    </a>
+                </div>
+            </header>
 
-        <!-- Hero -->
-        <header id="hero" class="pt-24 text-center">
-            <h1 class="text-4xl text-blue-600 dark:text-blue-400 md:text-5xl xl:text-6xl"><strong>Quickstart TailwindCSS</strong></h1>
-            <h2 class="mt-4 leading-4 md:text-4xl xl:text-5xl md:leading-4 xl:leading-4"><span class="text-base">Ready made HTML and TailwindCSS boilerplate with stylized UI presets for rapid web development.</span></h2>
-            <div class="flex justify-center gap-4 mt-8">
-                <a href="https://github.com/mkfizi/tailstart/raw/main/tailstart.zip" target="_blank" class="inline-block px-4 py-2 text-base font-semibold text-white transition bg-blue-600 border border-blue-600 rounded hover:bg-blue-700 hover:border-blue-700">
-                    <span class="flex gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Features -->
+            <section id="features" class="pt-16 mt-32">
+                <p class="text-xl font-bold text-center text-blue-600 md:text-2xl xl:text-3xl dark:text-blue-400">Features</p>
+
+                <div class="grid gap-4 mt-8 md:grid-cols-2">
+
+                    <!-- Features: Dark Mode Toggle -->
+                    <div class="flex w-full gap-4 p-4 border-2 rounded-md border-neutral-200 dark:border-neutral-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 shrink-0 stroke-blue-600 dark:stroke-blue-400" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
-                            <polyline points="7 11 12 16 17 11" />
-                            <line x1="12" y1="4" x2="12" y2="16" />
+                            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+                            <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2" />
+                            <path d="M19 11h2m-1 -1v2" />
                         </svg>
-                        <span>Download</span>
-                    </span>
-                </a>
-                <a href="https://github.com/mkfizi/tailstart" target="_blank" class="inline-block px-4 py-2 text-base font-semibold text-blue-600 transition bg-transparent border border-blue-600 rounded dark:border-blue-500 dark:text-blue-500 dark:hover:bg-blue-700 hover:bg-blue-700 hover:text-white dark:hover:border-blue-700 dark:hover:text-white hover:border-blue-700">
-                    <span class="flex gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <div>
+                            <p class="text-base text-blue-600 dark:text-blue-400"><strong>Dark Mode Toggle</strong></p>
+                            <p class="mt-2 text-base">Dark mode toggle using TailwindCSS built-in dark mode utility.</p>
+                        </div>
+                    </div>
+
+                    <!-- Features: Navbar Handler -->
+                    <div class="flex w-full gap-4 p-4 border-2 rounded-md border-neutral-200 dark:border-neutral-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-blue-600 dark:stroke-blue-400" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                            <rect x="4" y="4" width="16" height="16" rx="2" />
+                            <line x1="4" y1="9" x2="20" y2="9" />
                         </svg>
-                        <span>Github</span>
-                    </span>
-                </a>
-            </div>
-        </header>
+                        <div>
+                            <p class="text-base text-blue-600 dark:text-blue-400"><strong>Navbar Handler</strong></p>
+                            <p class="mt-2 text-base">Handle navbar apperance based on window's current scroll position.</p>
+                        </div>
+                    </div>
 
-        <!-- Features -->
-        <section id="features" class="mt-48">
-            <p class="text-xl font-bold text-center text-blue-600 md:text-2xl xl:text-3xl dark:text-blue-400">Features</p>
+                    <!-- Features: Style Presets -->
+                    <div class="flex w-full gap-4 p-4 border-2 rounded-md border-neutral-200 dark:border-neutral-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-blue-600 dark:stroke-blue-400" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <rect x="4" y="4" width="6" height="6" rx="1" />
+                            <rect x="14" y="4" width="6" height="6" rx="1" />
+                            <rect x="4" y="14" width="6" height="6" rx="1" />
+                            <rect x="14" y="14" width="6" height="6" rx="1" />
+                        </svg>
+                        <div>
+                            <p class="text-base text-blue-600 dark:text-blue-400"><strong>Style Presets</strong></p>
+                            <p class="mt-2 text-base">Style presets preferences for rapid prototype development.</p>
+                        </div>
+                    </div>
 
-            <div class="grid gap-4 mt-8 md:grid-cols-2">
-
-                <!-- Features: Dark Mode Toggle -->
-                <div class="flex w-full gap-4 p-4 border-2 rounded-md border-neutral-200 dark:border-neutral-800">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-blue-600 dark:stroke-blue-400" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
-                        <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2" />
-                        <path d="M19 11h2m-1 -1v2" />
-                    </svg>
-                    <div>
-                        <p class="text-base text-blue-600 dark:text-blue-400"><strong>Dark Mode Toggle</strong></p>
-                        <p class="mt-2 text-base">Dark mode toggle using TailwindCSS built-in dark mode utility.</p>
+                    <!-- Features: Viewport Height Fix -->
+                    <div class="flex w-full gap-4 p-4 border-2 rounded-md border-neutral-200 dark:border-neutral-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-blue-600 dark:stroke-blue-400" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M4 20v-2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2" />
+                            <path d="M4 4v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                            <path d="M16 12h-8" />
+                        </svg>
+                        <div>
+                            <p class="text-base text-blue-600 dark:text-blue-400"><strong>Viewport Height Fix</strong></p>
+                            <p class="mt-2 text-base">Add-on fixes for viewport height issue on mobile browsers.</p>
+                        </div>
                     </div>
                 </div>
+            </section>
 
-                <!-- Features: Navbar Handler -->
-                <div class="flex w-full gap-4 p-4 border-2 rounded-md border-neutral-200 dark:border-neutral-800">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-blue-600 dark:stroke-blue-400" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <rect x="4" y="4" width="16" height="16" rx="2" />
-                        <line x1="4" y1="9" x2="20" y2="9" />
-                    </svg>
-                    <div>
-                        <p class="text-base text-blue-600 dark:text-blue-400"><strong>Navbar Handler</strong></p>
-                        <p class="mt-2 text-base">Handle navbar apperance based on window's current scroll position.</p>
-                    </div>
-                </div>
+            <!-- Presets -->
+            <section id="presets" class="pt-16 mt-32">
+                <p class="text-xl font-bold text-center text-blue-600 md:text-2xl xl:text-3xl dark:text-blue-400">Presets</p>
 
-                <!-- Features: Style Presets -->
-                <div class="flex w-full gap-4 p-4 border-2 rounded-md border-neutral-200 dark:border-neutral-800">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-blue-600 dark:stroke-blue-400" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <rect x="4" y="4" width="6" height="6" rx="1" />
-                        <rect x="14" y="4" width="6" height="6" rx="1" />
-                        <rect x="4" y="14" width="6" height="6" rx="1" />
-                        <rect x="14" y="14" width="6" height="6" rx="1" />
-                    </svg>
-                    <div>
-                        <p class="text-base text-blue-600 dark:text-blue-400"><strong>Style Presets</strong></p>
-                        <p class="mt-2 text-base">Style presets preferences for rapid prototype development.</p>
-                    </div>
-                </div>
-
-                <!-- Features: Viewport Height Fix -->
-                <div class="flex w-full gap-4 p-4 border-2 rounded-md border-neutral-200 dark:border-neutral-800">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-blue-600 dark:stroke-blue-400" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M4 20v-2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2" />
-                        <path d="M4 4v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
-                        <path d="M16 12h-8" />
-                    </svg>
-                    <div>
-                        <p class="text-base text-blue-600 dark:text-blue-400"><strong>Viewport Height Fix</strong></p>
-                        <p class="mt-2 text-base">Add-on fixes for viewport height issue on mobile browsers.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Presets -->
-        <section id="presets" class="pt-24">
-            <p class="text-xl font-bold text-center text-blue-600 md:text-2xl xl:text-3xl dark:text-blue-400">Presets</p>
-
-            <!-- Text -->
-            <div class="mt-8">
-                <p class="text-lg text-blue-600 dark:text-blue-400"><strong>Text</strong></p>
-                
-                <div class="mt-2">
-
-                    <!-- Text: Regular -->
-                    <p class="text-base">Regular</p>
-
-                    <!-- Text: Bold -->
-                    <p class="text-base"><strong>Bold</strong></p>
+                <!-- Text -->
+                <div class="mt-8">
+                    <p class="text-lg text-blue-600 dark:text-blue-400"><strong>Text</strong></p>
                     
-                    <!-- Text: Bold -->
-                    <p class="text-base"><em>Italics</em></p>
+                    <div class="mt-2">
+
+                        <!-- Text: Regular -->
+                        <p class="text-base">Regular</p>
+
+                        <!-- Text: Bold -->
+                        <p class="text-base"><strong>Bold</strong></p>
+                        
+                        <!-- Text: Bold -->
+                        <p class="text-base"><em>Italics</em></p>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Heading -->
-            <div class="mt-8">
-                <p class="text-lg text-blue-600 dark:text-blue-400"><strong>Heading</strong></p>
+                <!-- Heading -->
+                <div class="mt-8">
+                    <p class="text-lg text-blue-600 dark:text-blue-400"><strong>Heading</strong></p>
 
-                <div class="mt-2">
+                    <div class="mt-2">
 
-                    <!-- Heading: Heading 1 -->
-                    <h1 class="text-4xl md:text-5xl xl:text-6xl">Heading 1</h1>
+                        <!-- Heading: Heading 1 -->
+                        <h1 class="text-4xl md:text-5xl xl:text-6xl">Heading 1</h1>
 
-                    <!-- Heading: Heading 2 -->
-                    <h2 class="text-3xl md:text-4xl xl:text-5xl">Heading 2</h2>
+                        <!-- Heading: Heading 2 -->
+                        <h2 class="text-3xl md:text-4xl xl:text-5xl">Heading 2</h2>
 
-                    <!-- Heading: Heading 3 -->
-                    <h3 class="text-2xl md:text-3xl xl:text-4xl">Heading 3</h3>
+                        <!-- Heading: Heading 3 -->
+                        <h3 class="text-2xl md:text-3xl xl:text-4xl">Heading 3</h3>
 
-                    <!-- Heading: Heading 4 -->
-                    <h4 class="text-xl md:text-2xl xl:text-3xl">Heading 4</h4>
+                        <!-- Heading: Heading 4 -->
+                        <h4 class="text-xl md:text-2xl xl:text-3xl">Heading 4</h4>
 
-                    <!-- Heading: Heading 5 -->
-                    <h5 class="text-lg md:text-xl xl:text-2xl">Heading 5</h5>
+                        <!-- Heading: Heading 5 -->
+                        <h5 class="text-lg md:text-xl xl:text-2xl">Heading 5</h5>
 
-                    <!-- Heading: Heading 6 -->
-                    <h6 class="text-base md:text-lg xl:text-xl">Heading 6</h6>
+                        <!-- Heading: Heading 6 -->
+                        <h6 class="text-base md:text-lg xl:text-xl">Heading 6</h6>
+                    </div> 
                 </div> 
-            </div> 
 
-            <!-- Link -->
-            <div class="mt-8">
-                <p class="text-lg text-blue-600 dark:text-blue-400"><strong>Link</strong></p>
+                <!-- Link -->
+                <div class="mt-8">
+                    <p class="text-lg text-blue-600 dark:text-blue-400"><strong>Link</strong></p>
 
-                <!-- Link: Regular -->
-                <div class="mt-2">
-                    <a href="#" class="inline-block text-base text-blue-700 transition dark:text-blue-500 dark:hover:text-blue-700 hover:text-blue-500">Regular Link</a>
-                </div>
-
-                <!-- Link: Underline -->
-                <div>
-                    <a href="#" class="inline-block text-base text-blue-700 underline transition dark:text-blue-500 dark:hover:text-blue-700 hover:text-blue-500">Underline Link</a>
-                </div>
-            </div> 
-
-            <!-- List -->
-            <div class="mt-8">
-                <p class="text-lg text-blue-600 dark:text-blue-400"><strong>List</strong></p>
-
-                <div class="grid w-full grid-cols-1 gap-4 mt-2 md:gap-8 md:grid-cols-3">
-                    
-                    <!-- List: List None -->
-                    <div>
-                        <p class="text-base"><strong>Regular List</strong></p>
-                        <ul class="text-base list-none">
-                            <li>Item One</li>
-                            <li>Item Two</li>
-                            <li>Item Three</li>
-                        </ul>
+                    <!-- Link: Regular -->
+                    <div class="mt-2">
+                        <a href="#" class="inline-block text-base text-blue-700 transition dark:text-blue-500 dark:hover:text-blue-700 hover:text-blue-500">Regular Link</a>
                     </div>
 
-                    <!-- List: List Disc -->
+                    <!-- Link: Underline -->
                     <div>
-                        <p class="text-base"><strong>Disc List</strong></p>
-                        <ul class="ml-4 text-base list-disc">
-                            <li>Item One</li>
-                            <li>Item Two</li>
-                            <li>Item Three</li>
-                        </ul>
+                        <a href="#" class="inline-block text-base text-blue-700 underline transition dark:text-blue-500 dark:hover:text-blue-700 hover:text-blue-500">Underline Link</a>
                     </div>
+                </div> 
 
-                    <!-- List Numbered -->
-                    <div>
-                        <p class="text-base"><strong>Numbered List</strong></p>
-                        <ul class="ml-4 text-base list-decimal">
-                            <li>Item One</li>
-                            <li>Item Two</li>
-                            <li>Item Three</li>
-                        </ul>
+                <!-- List -->
+                <div class="mt-8">
+                    <p class="text-lg text-blue-600 dark:text-blue-400"><strong>List</strong></p>
+
+                    <div class="grid w-full grid-cols-1 gap-4 mt-2 md:gap-8 md:grid-cols-3">
+                        
+                        <!-- List: List None -->
+                        <div>
+                            <p class="text-base"><strong>Regular List</strong></p>
+                            <ul class="mt-2 text-base list-none">
+                                <li>Item One</li>
+                                <li>Item Two</li>
+                                <li>Item Three</li>
+                            </ul>
+                        </div>
+
+                        <!-- List: List Disc -->
+                        <div>
+                            <p class="text-base"><strong>Disc List</strong></p>
+                            <ul class="mt-2 text-base list-disc list-inside">
+                                <li>Item One</li>
+                                <li>Item Two</li>
+                                <li>Item Three</li>
+                            </ul>
+                        </div>
+
+                        <!-- List Numbered -->
+                        <div>
+                            <p class="text-base"><strong>Numbered List</strong></p>
+                            <ul class="mt-2 text-base list-decimal list-inside">
+                                <li>Item One</li>
+                                <li>Item Two</li>
+                                <li>Item Three</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Blockquote -->
-            <div class="mt-8">
-                <p class="text-lg text-blue-600 dark:text-blue-400"><strong>Blockquote</strong></p>
 
                 <!-- Blockquote -->
-                <blockquote class="p-2 mt-2 bg-blue-100 border-l-4 border-blue-600 dark:bg-blue-900 dark:border-blue-400">
-                    <p class="text-base">This is blockquote text example.</p>
-                </blockquote>
-            </div> 
+                <div class="mt-8">
+                    <p class="text-lg text-blue-600 dark:text-blue-400"><strong>Blockquote</strong></p>
 
-            <!-- Badge -->
-            <div class="mt-8">
-                <p class="text-lg text-blue-600 dark:text-blue-400"><strong>Badge</strong></p>
+                    <!-- Blockquote -->
+                    <blockquote class="p-2 mt-2 bg-blue-100 border-l-4 border-blue-600 dark:bg-blue-900 dark:border-blue-400">
+                        <p class="text-base">This is blockquote text example.</p>
+                    </blockquote>
+                </div> 
 
                 <!-- Badge -->
-                <div class="mt-2">
-                    <span class="inline-block px-2 py-px text-sm font-semibold text-blue-700 bg-blue-100 rounded dark:bg-blue-900 dark:text-blue-100">Badge</span>
+                <div class="mt-8">
+                    <p class="text-lg text-blue-600 dark:text-blue-400"><strong>Badge</strong></p>
+
+                    <!-- Badge -->
+                    <div class="mt-2">
+                        <span class="inline-block px-2 py-px text-sm font-semibold text-blue-700 bg-blue-100 rounded dark:bg-blue-900 dark:text-blue-100">Badge</span>
+                    </div>
+                </div> 
+
+                <!-- Button -->
+                <div class="mt-8">
+                    <p class="text-lg text-blue-600 dark:text-blue-400"><strong>Button</strong></p>
+
+                    <!-- Button: Regular -->
+                    <div class="grid grid-cols-1 gap-4 mt-2">
+                        <div>
+                            <p class="text-base"><strong>Regular</strong></p>
+                            <div class="mt-2">
+
+                                <button type="button" class="px-4 py-2 text-base font-semibold text-white transition bg-blue-600 border border-blue-600 rounded hover:bg-blue-700 hover:border-blue-700 disabled:bg-blue-300 disabled:border-blue-300 disabled:pointer-events-none">Button</button>
+                            </div>
+                        </div>
+
+                        <!-- Button: Outline -->
+                        <div>
+                            <p class="text-base"><strong>Outline</strong></p>
+                            <div class="mt-2">
+                                <button type="button" class="px-4 py-2 text-base font-semibold text-blue-600 transition bg-transparent border border-blue-600 rounded dark:border-blue-500 dark:text-blue-500 dark:hover:bg-blue-700 hover:bg-blue-700 hover:text-white dark:hover:border-blue-700 dark:hover:text-white hover:border-blue-700 disabled:text-blue-300 disabled:border-blue-300 disabled:pointer-events-none">Button</button>
+                            </div>
+                        </div>
+
+                        <!-- Link as Button: Regular -->
+                        <div>
+                            <p class="text-base"><strong>Regular (Link)</strong></p>
+                            <div class="mt-2">
+                                <a href="#" class="inline-block px-4 py-2 text-base font-semibold text-white transition bg-blue-600 border border-blue-600 rounded hover:bg-blue-700 hover:border-blue-700">Button</a>
+                            </div>
+                        </div>
+
+                        <!-- Link as a Button: Outline -->
+                        <div>
+                            <p class="text-base text-neutral-900 dark:text-white"><strong>Outline (Link)</strong></p>
+                            <div class="mt-2">
+                                <a href="#" class="inline-block px-4 py-2 text-base font-semibold text-blue-600 transition bg-transparent border border-blue-600 rounded dark:border-blue-500 dark:text-blue-500 dark:hover:bg-blue-700 hover:bg-blue-700 hover:text-white dark:hover:border-blue-700 dark:hover:text-white hover:border-blue-700">Button</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div> 
-
-            <!-- Button -->
-            <div class="mt-8">
-                <p class="text-lg text-blue-600 dark:text-blue-400"><strong>Button</strong></p>
-
-                <!-- Button: Regular -->
-                <div class="grid grid-cols-1 gap-4 mt-2">
-                    <div>
-                        <p class="text-base"><strong>Regular</strong></p>
-                        <button type="button" class="px-4 py-2 text-base font-semibold text-white transition bg-blue-600 border border-blue-600 rounded hover:bg-blue-700 hover:border-blue-700 disabled:bg-blue-300 disabled:border-blue-300 disabled:pointer-events-none">Button</button>
-                    </div>
-
-                    <!-- Button: Outline -->
-                    <div>
-                        <p class="text-base"><strong>Outline</strong></p>
-                        <button type="button" class="px-4 py-2 text-base font-semibold text-blue-600 transition bg-transparent border border-blue-600 rounded dark:border-blue-500 dark:text-blue-500 dark:hover:bg-blue-700 hover:bg-blue-700 hover:text-white dark:hover:border-blue-700 dark:hover:text-white hover:border-blue-700 disabled:text-blue-300 disabled:border-blue-300 disabled:pointer-events-none">Button</button>
-                    </div>
-
-                    <!-- Link as Button: Regular -->
-                    <div>
-                        <p class="text-base"><strong>Regular (Link)</strong></p>
-                        <a href="#" class="inline-block px-4 py-2 text-base font-semibold text-white transition bg-blue-600 border border-blue-600 rounded hover:bg-blue-700 hover:border-blue-700">Button</a>
-                    </div>
-
-                    <!-- Link as a Button: Outline -->
-                    <div>
-                        <p class="text-base text-neutral-900 dark:text-white"><strong>Outline (Link)</strong></p>
-                        <a href="#" class="inline-block px-4 py-2 text-base font-semibold text-blue-600 transition bg-transparent border border-blue-600 rounded dark:border-blue-500 dark:text-blue-500 dark:hover:bg-blue-700 hover:bg-blue-700 hover:text-white dark:hover:border-blue-700 dark:hover:text-white hover:border-blue-700">Button</a>
-                    </div>
-                </div>
-            </div>
-            
-        </section>
+                
+            </section>
+        </div>
 
     </main>
 
     <!-- Footer -->
-    <footer class="absolute bottom-0 w-full mt-8 text-center">
-        <p class="text-base text-neutral-900 dark:text-white"><small>Tailstart v0.2.3 © <span id="footerCurrentYear"></span></small></p>
+    <footer class="absolute bottom-0 w-full text-center">
+        <p class="text-base text-neutral-900 dark:text-white"><small>Tailstart v0.3.0 © <span id="footerCurrentYear"></span></small></p>
         <!-- 
             Handle footer current year.
 
