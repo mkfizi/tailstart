@@ -11,7 +11,7 @@ const root = __dirname + "/../";
 // Specify files and subdirectories to exclude from the archive.
 const exclude = [
 	".git/**",
-    "script/**",
+    "scripts/**",
 	".DS_Store",
 	"*/.DS_Store",
     "node_modules/**",
