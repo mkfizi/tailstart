@@ -16,9 +16,27 @@ Types of changes:
 ## [Unreleased]
 Put unreleased changes here.
 
+## [0.3.0] - 2023-04-12
+
+### Changed
+* Hero section to use `header` tag.
+* Increase breakpoints from `sm:` to `md:` and `lg:` to `xl:`.
+* Rename `script` subdirectory to `scripts`.
+* Change base colour from using `gray` to `neutral`.
+* Call `app.js` at the bottom of `index.html`.
+* Put `updateFooterCurrentYear` inside `app.js`.
+* Revert to using regular function for more concise code readibility.
+
+### Fixed
+* `404.html` view.
+
+### Removed
+* Title UI preset.
+* Features decsription in `README.md`.
+
 ## [0.2.3] - 2023-03-27
 ### Changed
-* Traditional function to arrow function in favor of minimalist codes.
+* Regular function to arrow function in favor of minimalist codes.
 * `input.css` to `style.css` and css output filename as `app.css`.
 * `script.js` to `app.js`.
 
