@@ -9,6 +9,10 @@ module.exports = {
     ],
     theme: {
         extend: {
+            /**
+             * Below are fixes to handle viewport height issue on mobile browsers
+             * https://stackoverflow.com/questions/37112218/css3-100vh-not-constant-in-mobile-browser
+             */
             minHeight: {
                 "screen": ["100vh", "calc(var(--vh, 1vh) * 100)"],
             },

@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Tailstart (v0.3.0): script.js
+ * Tailstart (v0.3.0): app.js
  * Licensed under MIT (https://github.com/mkfizi/tailstart/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -9,16 +9,6 @@
 
 const app = {
     /**
-     * Initialize the app by setting events and updating the viewport and navbar.
-     */
-    init() {
-        this.setEvents();
-        this.updateViewportHeight();
-        this.updateNavbar();
-        this.updateFooterCurrentYear();
-    },
-
-    /**
      * Set the events for resizing and scrolling the window, and for toggling dark mode.
      */
     setEvents(){
@@ -26,7 +16,7 @@ const app = {
         window.addEventListener("scroll", this.updateNavbar);
 
         const darkModeToggle = document.getElementById("darkModeToggle");
-        darkModeToggle.addEventListener("click", this.updateDarkMode); 
+        darkModeToggle.addEventListener("click", this.updateDarkMode.bind(this));
     },
 
     /**
@@ -37,10 +27,12 @@ const app = {
     },
 
     /**
-     * Update the navbar's appearance based on scrolling.
+     * Update the navbar's appearance based on window scroll position.
      */
     updateNavbar() {
         const navbar = document.getElementById("navbar");
+
+        // Check if window scroll position is below navbar position.
         if (window.pageYOffset > (navbar.offsetHeight - navbar.clientHeight)) {
             navbar.classList.add('bg-white', 'dark:bg-neutral-800', 'shadow');
         } else {
@@ -52,7 +44,6 @@ const app = {
      * Toggle between light and dark mode.
      */
     updateDarkMode() {
-        app.util.addRemoveTransition();
         if (localStorage.theme === "light" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: light)").matches)) {
             localStorage.theme = 'dark';
             document.documentElement.classList.add("dark");
@@ -66,29 +57,20 @@ const app = {
      * Update footer current year.
      */
     updateFooterCurrentYear() {
-        const element = document.getElementById("footerCurrentYear");
-        element.innerHTML = new Date().getFullYear();
-    }
-};
+        const footerCurrentYear = document.getElementById("footerCurrentYear");
+        footerCurrentYear.innerHTML = new Date().getFullYear();
+    },
 
-// Helper functions for the app.
-app.util = {
     /**
-     * Add and then remove a transition effect to prevent FOUC.
-     * 
-     * Note:
-     * For this to work, make sure 'transition-none' is defined after
-     * 'transition' and 'transition-*' classes in CSS output file.
+     * Initialize app.
      */
-    addRemoveTransition() {
-        const transitions = document.querySelectorAll(".transition, .transition-all, .transition-colors, .transition-opacity, .transition-shadow, .transition-transform");
-        transitions.forEach(function(transition) {
-            transition.classList.add("transition-none");
-            setTimeout(function(){ 
-                transition.classList.remove("transition-none"); 
-            }, 50);
-        });
-    }
+    init() {
+        this.setEvents();
+        this.updateViewportHeight();
+        this.updateNavbar();
+        this.updateFooterCurrentYear();
+    },
+
 };
 
 app.init();

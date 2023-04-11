@@ -4,7 +4,7 @@ This subdirectory consists of utility scripts that are used to compile Tailstart
 
 ## Usage
 
-You may refer below steps to modify and execute source code. Make sure NodeJs and NPM are installed on your machine before you proceed.
+You may refer below steps to modify and execute source code.
 
 Run below command to install dependencies.
 ```bash
