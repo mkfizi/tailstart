@@ -13,6 +13,6 @@
 		"watch:prod": "npx tailwindcss -i ./src/css/style.css -o ./src/css/style.min.css --watch --minify"
 	},
 	"devDependencies": {
-		"tailwindcss": "^3.2.4"
+		"tailwindcss": "^3.3.1"
 	}
 }
