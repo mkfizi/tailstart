@@ -1,6 +1,6 @@
 # Tailstart Script
 
-This subdirectory consists of utility scripts that are used to compile Tailstart files as a single archive file to be released to public.
+This subdirectory consists of utility scripts that are used to compile Tailstart files as a single archive file during development to be released to public.
 
 ## Usage
 
