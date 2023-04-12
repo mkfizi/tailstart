@@ -33,7 +33,7 @@ const app = {
         const navbar = document.getElementById("navbar");
 
         // Check if window scroll position is below navbar position.
-        (window.pageYOffset > (navbar.offsetHeight - navbar.clientHeight)) 
+        window.pageYOffset > (navbar.offsetHeight - navbar.clientHeight)
             ? navbar.classList.add('bg-white', 'dark:bg-neutral-800', 'shadow') 
             : navbar.classList.remove('bg-white', 'dark:bg-neutral-800', 'shadow');
     },
