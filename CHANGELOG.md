@@ -16,6 +16,17 @@ Types of changes:
 ## [Unreleased]
 Put unreleased changes here.
 
+## [0.3.1] - 2023-05-12
+
+### Changed
+* Tailstart description.
+* Hero section `margin` sizing.
+* Hero section `<h2>` font size.
+* Tailwind CSS input from `style.css` to `tailwind.css`.
+
+### Fixed
+* npm run command `build:prod` and `watch:prod` output to `app.min.js`.
+
 ## [0.3.0] - 2023-04-12
 
 ### Changed
