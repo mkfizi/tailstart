@@ -8,9 +8,7 @@
 "use strict";
 
 const app = {
-    /**
-     * Set the events for resizing and scrolling the window, and for toggling dark mode.
-     */
+    // Set the events for resizing and scrolling the window, and for toggling dark mode.
     setEvents(){
         window.addEventListener("resize", this.updateViewportHeight);
         window.addEventListener("scroll", this.updateNavbar);
@@ -19,16 +17,12 @@ const app = {
         darkModeToggle.addEventListener("click", this.updateDarkMode.bind(this));
     },
 
-    /**
-     * Update the height of the viewport.
-     */
+    // Update the height of the viewport.
     updateViewportHeight() {
         document.documentElement.style.setProperty("--vh", (window.innerHeight * 0.01) + "px");
     },
 
-    /**
-     * Update the navbar's appearance based on window scroll position.
-     */
+    // Update the navbar's appearance based on window scroll position.
     updateNavbar() {
         const navbar = document.getElementById("navbar");
 
@@ -38,9 +32,7 @@ const app = {
             : navbar.classList.remove('bg-white', 'dark:bg-neutral-800', 'shadow');
     },
 
-    /**
-     * Toggle between light and dark mode.
-     */
+    // Toggle between light and dark mode.
     updateDarkMode() {
         if (localStorage.theme === "light" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: light)").matches)) {
             localStorage.theme = 'dark';
@@ -51,17 +43,13 @@ const app = {
         };
     },
 
-    /**
-     * Update footer current year.
-     */
+    // Update footer current year.
     updateFooterCurrentYear() {
         const footerCurrentYear = document.getElementById("footerCurrentYear");
         footerCurrentYear.innerHTML = new Date().getFullYear();
     },
 
-    /**
-     * Initialize app.
-     */
+    // Initialize app.
     init() {
         this.setEvents();
         this.updateViewportHeight();
