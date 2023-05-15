@@ -36,7 +36,7 @@ Put unreleased changes here.
 * All `rounded` classes changed to `rounded-md`.
 
 ### Fixed
-* Error handling in `updateFooterCurrentYear()` method.
+* Error handling in `setEvents()` and `updateFooterCurrentYear()`  methods.
 
 ## [0.3.0] - 2023-04-12
 

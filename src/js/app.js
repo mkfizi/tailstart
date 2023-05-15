@@ -14,7 +14,7 @@ let app = {
         window.addEventListener("scroll", this.updateNavbar);
 
         const darkModeToggle = document.getElementById("darkModeToggle");
-        darkModeToggle?.addEventListener("click", this.updateDarkMode.bind(this));
+        if (darkModeToggle) darkModeToggle.addEventListener("click", this.updateDarkMode.bind(this));
     },
 
     // Update the height of the viewport.
