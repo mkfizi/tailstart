@@ -27,6 +27,17 @@ Put unreleased changes here.
 ### Fixed
 * npm run command `build:prod` and `watch:prod` output to `app.min.js`.
 
+## [0.3.1] - 2023-05-15
+
+### Added
+* Re-add `addRemoveTransition()` utility method to handle FOUC.
+
+### Changed
+* All `rounded` classes changed to `rounded-md`.
+
+### Fixed
+* Error handling in `updateFooterCurrentYear()` method.
+
 ## [0.3.0] - 2023-04-12
 
 ### Changed
