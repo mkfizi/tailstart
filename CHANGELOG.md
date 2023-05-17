@@ -26,6 +26,7 @@ Put unreleased changes here.
 
 ### Changed
 * Navbar position from `sticky` to `fixed`.
+* Container size from `container` to `max-w-screen-2xl`
 
 ## [0.3.1] - 2023-05-12
 
