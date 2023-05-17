@@ -16,11 +16,20 @@ Types of changes:
 ## [Unreleased]
 Put unreleased changes here.
 
-## [0.3.1] - 2023-05-17
+## [0.3.2] - 2023-05-17
+
+### Added
+* Responsive `<nav>` padding.
+* Responsive `<main>` padding
+* App versioning.
+
+### Changed
+* Navbar position from `sticky` to `fixed`.
+
+## [0.3.1] - 2023-05-12
 
 ### Changed
 * Tailstart description.
-* Navbar position from `sticky` to `fixed`.
 * Hero section `margin` sizing.
 * Hero section `<h2>` font size.
 * Tailwind CSS input from `style.css` to `tailwind.css`.
