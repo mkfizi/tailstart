@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Tailstart (v0.3.0): app.js
+ * Tailstart (v0.3.2): app.js
  * Licensed under MIT (https://github.com/mkfizi/tailstart/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -8,6 +8,8 @@
 "use strict";
 
 let app = {
+    version: "0.3.2",
+
     // Set the events for resizing and scrolling the window, and for toggling dark mode.
     setEvents(){
         window.addEventListener("resize", this.updateViewportHeight);
@@ -46,6 +48,18 @@ let app = {
         };
     },
 
+    // Update header current version
+    updateHeaderCurrentVersion() {
+        const headerCurrentVersion = document.getElementById("headerCurrentVersion");
+        if (headerCurrentVersion) headerCurrentVersion.innerHTML = this.version;
+    },
+
+    // Update footer current version
+    updateFooterCurrentVersion() {
+        const footerCurrentVersion = document.getElementById("footerCurrentVersion");
+        if (footerCurrentVersion) footerCurrentVersion.innerHTML = this.version;
+    },
+
     // Update footer current year.
     updateFooterCurrentYear() {
         const footerCurrentYear = document.getElementById("footerCurrentYear");
@@ -57,6 +71,8 @@ let app = {
         this.setEvents();
         this.updateViewportHeight();
         this.updateNavbar();
+        this.updateHeaderCurrentVersion();
+        this.updateFooterCurrentVersion();
         this.updateFooterCurrentYear();
     },
 };
