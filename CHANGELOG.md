@@ -19,6 +19,7 @@ Put unreleased changes here.
 ## [0.3.2] - 2023-05-17
 
 ### Added
+* `max-w-screen-2xl` to `<nav>` for large screen max width.
 * Responsive `<nav>` padding.
 * Responsive `<main>` padding
 * App versioning.
