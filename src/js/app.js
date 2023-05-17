@@ -48,15 +48,11 @@ let app = {
         };
     },
 
-    // Update header current version
-    updateHeaderCurrentVersion() {
+    // Update app current version
+    updateAppCurrentVersion() {
         const headerCurrentVersion = document.getElementById("headerCurrentVersion");
-        if (headerCurrentVersion) headerCurrentVersion.innerHTML = this.version;
-    },
-
-    // Update footer current version
-    updateFooterCurrentVersion() {
         const footerCurrentVersion = document.getElementById("footerCurrentVersion");
+        if (headerCurrentVersion) headerCurrentVersion.innerHTML = this.version;
         if (footerCurrentVersion) footerCurrentVersion.innerHTML = this.version;
     },
 
@@ -71,8 +67,7 @@ let app = {
         this.setEvents();
         this.updateViewportHeight();
         this.updateNavbar();
-        this.updateHeaderCurrentVersion();
-        this.updateFooterCurrentVersion();
+        this.updateAppCurrentVersion();
         this.updateFooterCurrentYear();
     },
 };

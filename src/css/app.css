@@ -581,6 +581,11 @@ video {
   margin-right: auto;
 }
 
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .mt-1 {
   margin-top: 0.25rem;
 }
@@ -799,6 +804,11 @@ video {
 .py-px {
   padding-top: 1px;
   padding-bottom: 1px;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pt-16 {
@@ -1064,6 +1074,11 @@ body{
 
   .md\:gap-8 {
     gap: 2rem;
+  }
+
+  .md\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .md\:text-2xl {
