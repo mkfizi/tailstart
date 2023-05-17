@@ -652,6 +652,18 @@ video {
   max-width: 768px;
 }
 
+.max-w-6xl {
+  max-width: 72rem;
+}
+
+.max-w-7xl {
+  max-width: 80rem;
+}
+
+.max-w-screen-2xl {
+  max-width: 1536px;
+}
+
 .shrink-0 {
   flex-shrink: 0;
 }
@@ -801,14 +813,14 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.py-px {
-  padding-top: 1px;
-  padding-bottom: 1px;
-}
-
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.py-px {
+  padding-top: 1px;
+  padding-bottom: 1px;
 }
 
 .pt-16 {
@@ -1148,5 +1160,12 @@ body{
   .xl\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
