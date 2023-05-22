@@ -1,10 +1,10 @@
 {
   "name": "tailstart-script",
-  "version": "0.2.3",
+  "version": "0.3.3",
   "description": "",
   "scripts": {
-    "build": "node ./archiver.js",
-    "watch": "node ./watcher.js"
+    "build": "node ./index.js build",
+    "watch": "node ./index.js watch"
   },
   "author": "",
   "license": "MIT",
