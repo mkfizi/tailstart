@@ -16,7 +16,7 @@ Types of changes:
 ## [Unreleased]
 Put unreleased changes here.
 
-## [0.3.2] - 2023-05-17
+## [0.3.2] - 2023-05-23
 
 ### Added
 * `max-w-screen-2xl` to `<nav>` for large screen max width.
@@ -27,28 +27,25 @@ Put unreleased changes here.
 ### Changed
 * Navbar position from `sticky` to `fixed`.
 * Container size from `container` to `max-w-screen-2xl`
+* Rename `scripts` subdirectory to `nodejs`.
+* Combine `archiver.js` and `watcher.js` in `nodejs/` as single `index.js`.
+* Update `package.json` in `nodejs/`. 
 
 ## [0.3.1] - 2023-05-12
-
-### Changed
-* Tailstart description.
-* Hero section `margin` sizing.
-* Hero section `<h2>` font size.
-* Tailwind CSS input from `style.css` to `tailwind.css`.
-
-### Fixed
-* npm run command `build:prod` and `watch:prod` output to `app.min.js`.
-
-## [0.3.1] - 2023-05-15
 
 ### Added
 * Re-add `addRemoveTransition()` utility method to handle FOUC.
 
 ### Changed
 * All `rounded` classes changed to `rounded-md`.
+* Tailstart description.
+* Hero section `margin` sizing.
+* Hero section `<h2>` font size.
+* Tailwind CSS input from `style.css` to `tailwind.css`.
 
 ### Fixed
 * Error handling in `setEvents()` and `updateFooterCurrentYear()`  methods.
+* npm run command `build:prod` and `watch:prod` output to `app.min.js`.
 
 ## [0.3.0] - 2023-04-12
 
