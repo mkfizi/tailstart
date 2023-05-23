@@ -30,6 +30,7 @@ Put unreleased changes here.
 * Rename `scripts` subdirectory to `nodejs`.
 * Combine `archiver.js` and `watcher.js` in `nodejs/` as single `index.js`.
 * Update `package.json` in `nodejs/`. 
+* Change absolute path `./` to `/`.
 
 ## [0.3.1] - 2023-05-12
 
