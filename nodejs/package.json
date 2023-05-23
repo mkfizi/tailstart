@@ -1,7 +1,7 @@
 {
-  "name": "tailstart-script",
-  "version": "0.3.3",
-  "description": "",
+  "name": "tailstart-nodejs",
+  "version": "0.3.2",
+  "description": "NodeJS script to compile Tailstart as a single archive file during development to be released to public.",
   "scripts": {
     "build": "node ./index.js build",
     "watch": "node ./index.js watch"
@@ -10,6 +10,6 @@
   "license": "MIT",
   "devDependencies": {
     "archiver": "^5.3.1",
-    "glob": "^8.1.0"
+    "glob": "^10.2.6"
   }
 }
