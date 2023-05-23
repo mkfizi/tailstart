@@ -5,7 +5,6 @@ const fs = require("fs");
 const archiver = require("archiver");
 const glob = require("glob");
 const path = require("path");
-const exec = require("child_process").exec;
 
 // Define the root and output directories
 const root = __dirname + "/../";
