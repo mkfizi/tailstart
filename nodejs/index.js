@@ -10,6 +10,7 @@ const exec = require("child_process").exec;
 // Define the root and output directories
 const root = __dirname + "/../";
 const outputDir = root;
+const archiveFile = "tailstart.zip";
 
 // Define the files and directories to exclude
 const exclude = [
@@ -18,12 +19,12 @@ const exclude = [
     ".DS_Store",
     "*/.DS_Store",
     "node_modules/**",
-    "tailstart.zip",
+    archiveFile,
 ];
 
 // Function to archive files
 const build = () => {
-    const output = fs.createWriteStream(outputDir + "/tailstart.zip");
+    const output = fs.createWriteStream(outputDir + "/" + archiveFile);
 
     const archive = archiver("zip", {
         zlib: { level: 9 }
