@@ -71,12 +71,12 @@ const watch = () => {
 
 // Check the command line arguments to determine whether to build or watch
 switch (process.argv[2]) {
-case 'build':
-    build();
-    break;
-case 'watch':
-    watch();
-    break;
-default:
-    console.log('Invalid command. Please use "npm run build" or "npm run watch".');
+    case 'build':
+        build();
+        break;
+    case 'watch':
+        watch();
+        break;
+    default:
+        console.log('Invalid command. Please use "npm run build" or "npm run watch".');
 }
