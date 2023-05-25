@@ -17,7 +17,6 @@ Types of changes:
 Put unreleased changes here.
 
 ## [0.3.2] - 2023-05-23
-
 ### Added
 * `max-w-screen-2xl` to `<nav>` for large screen max width.
 * Responsive `<nav>` padding.
@@ -33,7 +32,6 @@ Put unreleased changes here.
 * Change absolute path `./` to `/`.
 
 ## [0.3.1] - 2023-05-12
-
 ### Added
 * Re-add `addRemoveTransition()` utility method to handle FOUC.
 
