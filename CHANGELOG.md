@@ -16,7 +16,7 @@ Types of changes:
 ## [Unreleased]
 Put unreleased changes here.
 
-## [0.3.2] - 2023-05-23
+## [0.3.2] - 2023-05-29
 ### Added
 * `max-w-screen-2xl` to `<nav>` for large screen max width.
 * Responsive `<nav>` padding.
@@ -29,7 +29,6 @@ Put unreleased changes here.
 * Rename `scripts` subdirectory to `nodejs`.
 * Combine `archiver.js` and `watcher.js` in `nodejs/` as single `index.js`.
 * Update `package.json` in `nodejs/`. 
-* Change absolute path `./` to `/`.
 
 ## [0.3.1] - 2023-05-12
 ### Added
