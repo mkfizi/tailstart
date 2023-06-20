@@ -7,32 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- SEO data -->
+    <!-- SEO -->
     <meta name="title" content="Tailstart">
-    <meta name="description" content="Ready made HTML and TailwindCSS boilerplate with stylized UI presets.">
+    <meta name="description" content="Ready made TailwindCSS starter kit boilerplates for Javascript, AlpineJS, React and Vue.">
     <meta name="robots" content="index, follow">
-    
-    <!-- Credit & Technology Stacks -->
-    <link type="text/plain" rel="author" href="./humans.txt">
 
-    <!-- Facebook open graph data -->
-    <meta property="fb:app_id" content="123456789">
-    <meta property="og:url" content="https://www.example.com/path/to/page.html">
+    <!-- Facebook open graph -->
+    <meta property="og:url" content="https://tailstart.github.io">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Tailstart">
-    <meta property="og:image" content="https://www.example.com/path/to/image.jpg">
-    <meta property="og:description" content="Ready made HTML and TailwindCSS boilerplate with stylized UI presets.">
-    <meta property="og:site_name" content="Tailstart">
+    <meta property="og:image" content="https://tailstart.github.io/src/images/fb-og.jpg">
+    <meta property="og:description" content="Ready made TailwindCSS starter kit boilerplates for Javascript, AlpineJS, React and Vue.">
+    <meta property="og:site_name" content="Tailstart Landing Page Lite">
 
     <!-- Twitter cards -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@site_account">
-    <meta name="twitter:creator" content="@individual_account">
-    <meta name="twitter:url" content="https://www.example.com/path/to/page.html">
+    <meta name="twitter:site" content="@mkfizi">
+    <meta name="twitter:creator" content="@mkfizi">
+    <meta name="twitter:url" content="https://tailstart.github.io">
     <meta name="twitter:title" content="Tailstart">
-    <meta name="twitter:description" content="Ready made HTML and TailwindCSS boilerplate with stylized UI presets.">
-    <meta name="twitter:image" content="https://www.example.com/path/to/image.jpg">
-    
+    <meta name="twitter:description" content="Ready made TailwindCSS starter kit boilerplates for Javascript, AlpineJS, React and Vue.">
+    <meta name="twitter:image" content="https://tailstart.github.io/src/images/tw-card.jpg">
+
     <!-- Favicon -->
     <link rel="manifest" href="./site.webmanifest">
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
@@ -43,6 +39,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="./src/css/app.css">
+    <link rel="preload" as="font">
 
     <!-- 
         Handle dark mode toggle when the page is loaded.
@@ -62,304 +59,166 @@
 
     <title>Tailstart</title>
 </head>
-<body class="relative min-h-screen antialiased bg-white text-neutral-900 dark:text-white dark:bg-neutral-900">
-
-    <!-- Navbar -->
-    <nav id="navbar" class="fixed top-0 z-10 w-full">
-        <div class="flex items-center justify-between w-full px-4 py-4 mx-auto max-w-screen-2xl md:px-8">
-            <!-- Nav title -->
-            <a href="/index" class="inline-block text-base text-blue-700 transition dark:text-blue-500 dark:hover:text-blue-700 hover:text-blue-500"><strong class="text-lg">Tailstart</strong></a>
-            
-            <div class="flex gap-4 md:gap-8">
-                <!-- Nav links -->
-                <a href="#features" class="inline-block text-base text-blue-700 transition dark:text-blue-500 dark:hover:text-blue-700 hover:text-blue-500"><strong>Features</strong></a>
-                <a href="#presets" class="inline-block text-base text-blue-700 transition dark:text-blue-500 dark:hover:text-blue-700 hover:text-blue-500"><strong>Presets</strong></a>
-            
-                <!-- Dark mode toggle -->
-                <button type="button" id="darkModeToggle" class="flex items-center" aria-label="Dark Mode Toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="transition stroke-blue-700 fill-blue-700 hover:stroke-blue-500 hover:fill-blue-500 dark:hidden" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="hidden stroke-blue-500 fill-blue-500 hover:stroke-blue-700 hover:fill-blue-700 dark:block" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<body class="relative min-h-screen antialiased bg-white dark:bg-neutral-900">
+    <nav id="navbar" class="sticky top-0 z-10 w-full h-16 bg-white border-b border-transparent dark:bg-neutral-900 dark:border-transparent">
+        <div class="flex items-center justify-between w-full h-full max-w-screen-xl px-4 mx-auto sm:px-8">
+            <a href="./" class="flex">
+                <img src="./src/images/logo.png" alt="Tailstart Logo" class="w-6 h-6 dark:hidden">
+                <img src="./src/images/logo-dark.png" alt="Tailstart Logo" class="hidden w-6 h-6 dark:block">
+            </a>
+            <div class="flex items-center gap-4">
+                <ul id="navbarMenu" class="fixed top-0 left-0 z-20 flex-col hidden w-screen h-screen gap-4 p-4 overflow-y-auto bg-white sm:static dark:bg-neutral-800 sm:bg-transparent dark:sm:bg-transparent sm:h-full sm:w-auto sm:flex-row sm:overflow-none sm:gap-8 sm:flex sm:z-auto">
+                    <button type="button" id="navbarMenuToggle" class="absolute right-4 top-4 sm:hidden" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navbar menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 stroke-black dark:stroke-white" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M18 6l-12 12" />
+                            <path d="M6 6l12 12" />
+                        </svg>
+                    </button>
+                    <li>
+                        <a href="./" class="invisible inline-block text-base font-semibold text-neutral-600 dark:text-neutral-400 sm:visible">Starter Kits</a>
+                    </li>
+                    <li>
+                        <a href="./presets" class="invisible inline-block text-base font-semibold text-black dark:text-white sm:visible">Presets</a>
+                    </li>
+                    <li>
+                        <a href="./components" class="invisible inline-block text-base font-semibold text-black dark:text-white sm:visible">Components</a>
+                    </li>
+                </ul>
+                <button type="button" id="darkModeToggle" aria-label="Dark mode toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 dark:hidden stroke-black fill-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                         <circle cx="12" cy="12" r="4" />
                         <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="hidden w-6 h-6 stroke-white dark:block fill-white" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+                    </svg>
+                </button>
+                <button type="button" id="navbarMenuToggle" class="sm:hidden" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navbar menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 stroke-black dark:stroke-white" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
                     </svg>
                 </button>
             </div>
         </div>
     </nav>
+    <main class="w-full max-w-screen-xl px-4 pt-8 pb-12 mx-auto sm:px-8">
+        <header class="max-w-screen-md py-16 mx-auto text-center sm:py-24 lg:py-32">
+            <h1 class="mt-8 text-4xl font-black text-black sm:text-5xl lg:text-6xl dark:text-white"><span class="text-neutral-600 dark:text-neutral-400">TailwindCSS</span> Starter Kit</h1>
+            <h2 class="mt-4 text-lg text-black sm:text-xl lg:text-2xl dark:text-white">Quickstart your next web development project with handcrafted simplified boilerplates for <span class="font-bold">FREE</span>.</h2>
+            <div class="flex justify-center gap-2 mt-4">
+               <span class="inline-block px-2 py-1 text-sm font-semibold text-black rounded-md dark:text-white bg-neutral-200 dark:bg-neutral-600">Javascript</span>
+               <span class="inline-block px-2 py-1 text-sm font-semibold text-black rounded-md dark:text-white bg-neutral-200 dark:bg-neutral-600">AlpineJS</span>
+               <span class="inline-block px-2 py-1 text-sm font-semibold text-black rounded-md dark:text-white bg-neutral-200 dark:bg-neutral-600">React</span>
+               <span class="inline-block px-2 py-1 text-sm font-semibold text-black rounded-md dark:text-white bg-neutral-200 dark:bg-neutral-600">Vue</span>
+            </div>
+            <div class="flex flex-col justify-center max-w-xs gap-4 mx-auto mt-12 sm:flex-row sm:max-w-none sm:mx-0">
+                <a href="#starter-kits" class="inline-block px-8 py-2 font-semibold text-white bg-black border border-black rounded-md hover:border-neutral-700 hover:bg-neutral-700 dark:bg-neutral-700 dark:border-neutral-700 dark:hover:border-neutral-600 dark:hover:bg-neutral-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="inline w-6 h-6 mr-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M15 12h3.586a1 1 0 0 1 .707 1.707l-6.586 6.586a1 1 0 0 1 -1.414 0l-6.586 -6.586a1 1 0 0 1 .707 -1.707h3.586v-6h6v6z" />
+                        <path d="M15 3h-6" />
+                    </svg>
+                    <span>Browse Starter Kits</span>
+                </a>
+                <a href="https://github.com/mkfizi/tailstart" target="_blank" class="inline-block px-8 py-2 font-semibold text-black bg-transparent border border-black rounded-md dark:text-white hover:text-white hover:border-neutral-700 hover:bg-neutral-700 dark:bg-transparent dark:border-neutral-700 dark:hover:border-neutral-600 dark:hover:bg-neutral-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="inline w-6 h-6 mr-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                    </svg>
+                    <span>View Github</span>
+                </a>
+             </div>
+        </header>
 
-    <!-- Content -->
-    <main class="px-4 py-16 mx-auto max-w-screen-2xl md:px-8">
-        <div class="max-w-screen-md mx-auto">
-            
-            <!-- Header -->
-            <header class="mt-32 text-center">
-                <h1 class="text-4xl text-blue-600 dark:text-blue-400 md:text-5xl xl:text-6xl"><strong>Quickstart TailwindCSS</strong></h1>
-                <h2 class="mt-8 text-base md:text-lg xl:text-xl">Ready made HTML and TailwindCSS boilerplate with stylized UI presets.</h2>
-                <div class="flex justify-center gap-4 mt-16">
-                    <a href="https://github.com/mkfizi/tailstart/raw/main/tailstart.zip" target="_blank" class="inline-block px-4 py-2 text-base font-semibold text-white transition bg-blue-600 border border-blue-600 rounded-md hover:bg-blue-700 hover:border-blue-700">
-                        <span class="flex gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
-                                <polyline points="7 11 12 16 17 11" />
-                                <line x1="12" y1="4" x2="12" y2="16" />
-                            </svg>
-                            <span>Download</span>
-                        </span>
-                    </a>
-                    <a href="https://github.com/mkfizi/tailstart" target="_blank" class="inline-block px-4 py-2 text-base font-semibold text-blue-600 transition bg-transparent border border-blue-600 rounded-md dark:border-blue-500 dark:text-blue-500 dark:hover:bg-blue-700 hover:bg-blue-700 hover:text-white dark:hover:border-blue-700 dark:hover:text-white hover:border-blue-700">
-                        <span class="flex gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
-                            </svg>
-                            <span>Github</span>
-                        </span>
-                    </a>
-                </div>
-                <div class="my-4">
-                    <span class="inline-block px-2 py-px text-sm font-semibold text-blue-700 bg-blue-100 rounded-md dark:bg-blue-900 dark:text-blue-100">Version <span id="headerCurrentVersion"></span></span>
-                </div>
-            </header>
-
-            <!-- Features -->
-            <section id="features" class="pt-16 mt-32">
-                <p class="text-xl font-bold text-center text-blue-600 md:text-2xl xl:text-3xl dark:text-blue-400">Features</p>
-
-                <div class="grid gap-4 mt-8 md:grid-cols-2">
-
-                    <!-- Features: Dark Mode Toggle -->
-                    <div class="flex w-full gap-4 p-4 border-2 rounded-md border-neutral-200 dark:border-neutral-800">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mt-1 shrink-0 stroke-blue-600 dark:stroke-blue-400" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <section id="starter-kits">
+            <p class="mt-8 mb-4 text-lg font-extrabold text-center text-black sm:text-xl lg:text-2xl dark:text-white">Starter Kits</p>
+            <div class="grid grid-cols-1 gap-8 mt-8 mb-12 sm:grid-cols-2 lg:grid-cols-3">
+                <a href="#" class="relative flex items-end justify-center h-64 overflow-hidden rounded-md bg-neutral-200 dark:bg-neutral-800 group">
+                    <div class="absolute top-0 left-0 flex items-center justify-center w-full h-full text-white opacity-0 bg-neutral-700/50 dark:bg-neutral-600/50 group-hover:opacity-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
-                            <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2" />
-                            <path d="M19 11h2m-1 -1v2" />
+                            <path d="M12 9v-3.586a1 1 0 0 1 1.707 -.707l6.586 6.586a1 1 0 0 1 0 1.414l-6.586 6.586a1 1 0 0 1 -1.707 -.707v-3.586h-6v-6h6z" />
+                            <path d="M3 9v6" />
                         </svg>
-                        <div>
-                            <p class="text-base text-blue-600 dark:text-blue-400"><strong>Dark Mode Toggle</strong></p>
-                            <p class="mt-2 text-base">Toggle site theme using TailwindCSS built-in dark mode utility.</p>
-                        </div>
                     </div>
-
-                    <!-- Features: Navbar Handler -->
-                    <div class="flex w-full gap-4 p-4 border-2 rounded-md border-neutral-200 dark:border-neutral-800">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mt-1 shrink-0 stroke-blue-600 dark:stroke-blue-400" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <span class="absolute inline-block px-2 py-1 text-sm font-semibold text-white bg-black rounded-md dark:bg-neutral-600 top-4 left-4">Website</span>
+                    <img src="./src/images/starter-kit.jpg" alt="" class="w-auto h-48 mb-px dark:hidden">
+                    <img src="./src/images/starter-kit-dark.jpg" alt="" class="hidden w-auto h-48 mb-px dark:block">
+                </a>
+                <a href="#" class="relative flex items-end justify-center h-64 overflow-hidden rounded-md bg-neutral-200 dark:bg-neutral-800 group">
+                    <div class="absolute top-0 left-0 flex items-center justify-center w-full h-full text-white opacity-0 bg-neutral-700/50 dark:bg-neutral-600/50 group-hover:opacity-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <rect x="4" y="4" width="16" height="16" rx="2" />
-                            <line x1="4" y1="9" x2="20" y2="9" />
+                            <path d="M12 9v-3.586a1 1 0 0 1 1.707 -.707l6.586 6.586a1 1 0 0 1 0 1.414l-6.586 6.586a1 1 0 0 1 -1.707 -.707v-3.586h-6v-6h6z" />
+                            <path d="M3 9v6" />
                         </svg>
-                        <div>
-                            <p class="text-base text-blue-600 dark:text-blue-400"><strong>Navbar Handler</strong></p>
-                            <p class="mt-2 text-base">Change navigation bar appearance based on window's current scroll position.</p>
-                        </div>
                     </div>
-
-                    <!-- Features: Style Presets -->
-                    <div class="flex w-full gap-4 p-4 border-2 rounded-md border-neutral-200 dark:border-neutral-800">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mt-1 shrink-0 stroke-blue-600 dark:stroke-blue-400" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <span class="absolute inline-block px-2 py-1 text-sm font-semibold text-white bg-black rounded-md dark:bg-neutral-600 top-4 left-4">Documentation</span>
+                    <img src="./src/images/starter-kit.jpg" alt="" class="w-auto h-48 mb-px dark:hidden">
+                    <img src="./src/images/starter-kit-dark.jpg" alt="" class="hidden w-auto h-48 mb-px dark:block">
+                </a>
+                <a href="#" class="relative flex items-end justify-center h-64 overflow-hidden rounded-md bg-neutral-200 dark:bg-neutral-800 group">
+                    <div class="absolute top-0 left-0 flex items-center justify-center w-full h-full text-white opacity-0 bg-neutral-700/50 dark:bg-neutral-600/50 group-hover:opacity-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <rect x="4" y="4" width="6" height="6" rx="1" />
-                            <rect x="14" y="4" width="6" height="6" rx="1" />
-                            <rect x="4" y="14" width="6" height="6" rx="1" />
-                            <rect x="14" y="14" width="6" height="6" rx="1" />
+                            <path d="M12 9v-3.586a1 1 0 0 1 1.707 -.707l6.586 6.586a1 1 0 0 1 0 1.414l-6.586 6.586a1 1 0 0 1 -1.707 -.707v-3.586h-6v-6h6z" />
+                            <path d="M3 9v6" />
                         </svg>
-                        <div>
-                            <p class="text-base text-blue-600 dark:text-blue-400"><strong>Style Presets</strong></p>
-                            <p class="mt-2 text-base">Predefine UI style presets for rapid prototype development.</p>
-                        </div>
                     </div>
-
-                    <!-- Features: Viewport Height Fix -->
-                    <div class="flex w-full gap-4 p-4 border-2 rounded-md border-neutral-200 dark:border-neutral-800">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mt-1 shrink-0 stroke-blue-600 dark:stroke-blue-400" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <span class="absolute inline-block px-2 py-1 text-sm font-semibold text-white bg-black rounded-md dark:bg-neutral-600 top-4 left-4">Blog</span>
+                    <img src="./src/images/starter-kit.jpg" alt="" class="w-auto h-48 mb-px dark:hidden">
+                    <img src="./src/images/starter-kit-dark.jpg" alt="" class="hidden w-auto h-48 mb-px dark:block">
+                </a>
+                <a href="#" class="relative flex items-end justify-center h-64 overflow-hidden rounded-md bg-neutral-200 dark:bg-neutral-800 group">
+                    <div class="absolute top-0 left-0 flex items-center justify-center w-full h-full text-white opacity-0 bg-neutral-700/50 dark:bg-neutral-600/50 group-hover:opacity-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M4 20v-2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v2" />
-                            <path d="M4 4v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
-                            <path d="M16 12h-8" />
+                            <path d="M12 9v-3.586a1 1 0 0 1 1.707 -.707l6.586 6.586a1 1 0 0 1 0 1.414l-6.586 6.586a1 1 0 0 1 -1.707 -.707v-3.586h-6v-6h6z" />
+                            <path d="M3 9v6" />
                         </svg>
-                        <div>
-                            <p class="text-base text-blue-600 dark:text-blue-400"><strong>Viewport Height Fix</strong></p>
-                            <p class="mt-2 text-base">Add-on fixes for <a href="https://stackoverflow.com/questions/37112218/css3-100vh-not-constant-in-mobile-browser" target="_blank" class="inline-block text-base text-blue-700 transition dark:text-blue-500 dark:hover:text-blue-700 hover:text-blue-500">viewport height issue</a> on mobile browsers.</p>
-                        </div>
                     </div>
-                </div>
-            </section>
-
-            <!-- Presets -->
-            <section id="presets" class="pt-16 mt-32">
-                <p class="text-xl font-bold text-center text-blue-600 md:text-2xl xl:text-3xl dark:text-blue-400">Presets</p>
-
-                <!-- Text -->
-                <div class="mt-8">
-                    <p class="text-lg text-blue-600 dark:text-blue-400"><strong>Text</strong></p>
-                    
-                    <div class="mt-2">
-
-                        <!-- Text: Regular -->
-                        <p class="text-base">Regular</p>
-
-                        <!-- Text: Bold -->
-                        <p class="text-base"><strong>Bold</strong></p>
-                        
-                        <!-- Text: Bold -->
-                        <p class="text-base"><em>Italics</em></p>
+                    <span class="absolute inline-block px-2 py-1 text-sm font-semibold text-white bg-black rounded-md dark:bg-neutral-600 top-4 left-4">Ecommerce</span>
+                    <img src="./src/images/starter-kit.jpg" alt="" class="w-auto h-48 mb-px dark:hidden">
+                    <img src="./src/images/starter-kit-dark.jpg" alt="" class="hidden w-auto h-48 mb-px dark:block">
+                </a>
+                <a href="#" class="relative flex items-end justify-center h-64 overflow-hidden rounded-md bg-neutral-200 dark:bg-neutral-800 group">
+                    <div class="absolute top-0 left-0 flex items-center justify-center w-full h-full text-white opacity-0 bg-neutral-700/50 dark:bg-neutral-600/50 group-hover:opacity-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M12 9v-3.586a1 1 0 0 1 1.707 -.707l6.586 6.586a1 1 0 0 1 0 1.414l-6.586 6.586a1 1 0 0 1 -1.707 -.707v-3.586h-6v-6h6z" />
+                            <path d="M3 9v6" />
+                        </svg>
                     </div>
-                </div>
-
-                <!-- Heading -->
-                <div class="mt-8">
-                    <p class="text-lg text-blue-600 dark:text-blue-400"><strong>Heading</strong></p>
-
-                    <div class="mt-2">
-
-                        <!-- Heading: Heading 1 -->
-                        <h1 class="text-4xl md:text-5xl xl:text-6xl">Heading 1</h1>
-
-                        <!-- Heading: Heading 2 -->
-                        <h2 class="text-3xl md:text-4xl xl:text-5xl">Heading 2</h2>
-
-                        <!-- Heading: Heading 3 -->
-                        <h3 class="text-2xl md:text-3xl xl:text-4xl">Heading 3</h3>
-
-                        <!-- Heading: Heading 4 -->
-                        <h4 class="text-xl md:text-2xl xl:text-3xl">Heading 4</h4>
-
-                        <!-- Heading: Heading 5 -->
-                        <h5 class="text-lg md:text-xl xl:text-2xl">Heading 5</h5>
-
-                        <!-- Heading: Heading 6 -->
-                        <h6 class="text-base md:text-lg xl:text-xl">Heading 6</h6>
-                    </div> 
-                </div> 
-
-                <!-- Link -->
-                <div class="mt-8">
-                    <p class="text-lg text-blue-600 dark:text-blue-400"><strong>Link</strong></p>
-
-                    <!-- Link: Regular -->
-                    <div class="mt-2">
-                        <a href="#" class="inline-block text-base text-blue-700 transition dark:text-blue-500 dark:hover:text-blue-700 hover:text-blue-500">Regular Link</a>
+                    <span class="absolute inline-block px-2 py-1 text-sm font-semibold text-white bg-black rounded-md dark:bg-neutral-600 top-4 left-4">Dashboard</span>
+                    <img src="./src/images/starter-kit.jpg" alt="" class="w-auto h-48 mb-px dark:hidden">
+                    <img src="./src/images/starter-kit-dark.jpg" alt="" class="hidden w-auto h-48 mb-px dark:block">
+                </a>
+                <a href="#" class="relative flex items-end justify-center h-64 overflow-hidden rounded-md bg-neutral-200 dark:bg-neutral-800 group">
+                    <div class="absolute top-0 left-0 flex items-center justify-center w-full h-full text-white opacity-0 bg-neutral-700/50 dark:bg-neutral-600/50 group-hover:opacity-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M12 9v-3.586a1 1 0 0 1 1.707 -.707l6.586 6.586a1 1 0 0 1 0 1.414l-6.586 6.586a1 1 0 0 1 -1.707 -.707v-3.586h-6v-6h6z" />
+                            <path d="M3 9v6" />
+                        </svg>
                     </div>
-
-                    <!-- Link: Underline -->
-                    <div>
-                        <a href="#" class="inline-block text-base text-blue-700 underline transition dark:text-blue-500 dark:hover:text-blue-700 hover:text-blue-500">Underline Link</a>
-                    </div>
-                </div> 
-
-                <!-- List -->
-                <div class="mt-8">
-                    <p class="text-lg text-blue-600 dark:text-blue-400"><strong>List</strong></p>
-
-                    <div class="grid w-full grid-cols-1 gap-4 mt-2 md:gap-8 md:grid-cols-3">
-                        
-                        <!-- List: List None -->
-                        <div>
-                            <p class="text-base"><strong>Regular List</strong></p>
-                            <ul class="mt-2 text-base list-none">
-                                <li>Item One</li>
-                                <li>Item Two</li>
-                                <li>Item Three</li>
-                            </ul>
-                        </div>
-
-                        <!-- List: List Disc -->
-                        <div>
-                            <p class="text-base"><strong>Disc List</strong></p>
-                            <ul class="mt-2 text-base list-disc list-inside">
-                                <li>Item One</li>
-                                <li>Item Two</li>
-                                <li>Item Three</li>
-                            </ul>
-                        </div>
-
-                        <!-- List Numbered -->
-                        <div>
-                            <p class="text-base"><strong>Numbered List</strong></p>
-                            <ul class="mt-2 text-base list-decimal list-inside">
-                                <li>Item One</li>
-                                <li>Item Two</li>
-                                <li>Item Three</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Blockquote -->
-                <div class="mt-8">
-                    <p class="text-lg text-blue-600 dark:text-blue-400"><strong>Blockquote</strong></p>
-
-                    <!-- Blockquote -->
-                    <blockquote class="p-2 mt-2 bg-blue-100 border-l-4 border-blue-600 dark:bg-blue-900 dark:border-blue-400">
-                        <p class="text-base">This is blockquote text example.</p>
-                    </blockquote>
-                </div> 
-
-                <!-- Badge -->
-                <div class="mt-8">
-                    <p class="text-lg text-blue-600 dark:text-blue-400"><strong>Badge</strong></p>
-
-                    <!-- Badge -->
-                    <div class="mt-2">
-                        <span class="inline-block px-2 py-px text-sm font-semibold text-blue-700 bg-blue-100 rounded-md dark:bg-blue-900 dark:text-blue-100">Badge</span>
-                    </div>
-                </div> 
-
-                <!-- Button -->
-                <div class="mt-8">
-                    <p class="text-lg text-blue-600 dark:text-blue-400"><strong>Button</strong></p>
-
-                    <!-- Button: Regular -->
-                    <div class="grid grid-cols-1 gap-4 mt-2">
-                        <div>
-                            <p class="text-base"><strong>Regular</strong></p>
-                            <div class="mt-2">
-                                <button type="button" class="px-4 py-2 text-base font-semibold text-white transition bg-blue-600 border border-blue-600 rounded-md hover:bg-blue-700 hover:border-blue-700 disabled:bg-blue-300 disabled:border-blue-300 disabled:pointer-events-none">Button</button>
-                            </div>
-                        </div>
-
-                        <!-- Button: Outline -->
-                        <div>
-                            <p class="text-base"><strong>Outline</strong></p>
-                            <div class="mt-2">
-                                <button type="button" class="px-4 py-2 text-base font-semibold text-blue-600 transition bg-transparent border border-blue-600 rounded-md dark:border-blue-500 dark:text-blue-500 dark:hover:bg-blue-700 hover:bg-blue-700 hover:text-white dark:hover:border-blue-700 dark:hover:text-white hover:border-blue-700 disabled:text-blue-300 disabled:border-blue-300 disabled:pointer-events-none">Button</button>
-                            </div>
-                        </div>
-
-                        <!-- Link as Button: Regular -->
-                        <div>
-                            <p class="text-base"><strong>Regular (Link)</strong></p>
-                            <div class="mt-2">
-                                <a href="#" class="inline-block px-4 py-2 text-base font-semibold text-white transition bg-blue-600 border border-blue-600 rounded-md hover:bg-blue-700 hover:border-blue-700">Button</a>
-                            </div>
-                        </div>
-
-                        <!-- Link as a Button: Outline -->
-                        <div>
-                            <p class="text-base text-neutral-900 dark:text-white"><strong>Outline (Link)</strong></p>
-                            <div class="mt-2">
-                                <a href="#" class="inline-block px-4 py-2 text-base font-semibold text-blue-600 transition bg-transparent border border-blue-600 rounded-md dark:border-blue-500 dark:text-blue-500 dark:hover:bg-blue-700 hover:bg-blue-700 hover:text-white dark:hover:border-blue-700 dark:hover:text-white hover:border-blue-700">Button</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </section>
-        </div>
-
+                    <span class="absolute inline-block px-2 py-1 text-sm font-semibold text-white bg-black rounded-md dark:bg-neutral-600 top-4 left-4">Dashboard Sidebar</span>
+                    <img src="./src/images/starter-kit.jpg" alt="" class="w-auto h-48 mb-px dark:hidden">
+                    <img src="./src/images/starter-kit-dark.jpg" alt="" class="hidden w-auto h-48 mb-px dark:block">
+                </a>
+            </div>
+        </section>
     </main>
-
-    <!-- Footer -->
-    <footer class="absolute bottom-0 w-full text-center">
-        <p class="text-base text-neutral-900 dark:text-white"><small>Tailstart v<span id="footerCurrentVersion"></span> © <span id="footerCurrentYear"></span></small></p>
+    
+    <footer class="absolute bottom-0 flex flex-col items-center justify-between w-full max-w-screen-xl px-4 pb-px transform -translate-x-1/2 sm:flex-row left-1/2 sm:px-8">
+        <p class="text-sm text-neutral-700 dark:text-neutral-300"><span id="footerAppName"></span> © <span id="footerCurrentYear"></span></p>
+        <span class="text-sm text-neutral-700 dark:text-neutral-300">Crafted by <a href="https://mkfizi.dev" target="_blank" class="inline-block text-black dark:text-white">mkfizi</a></span>
     </footer>
-
-    <!-- Scripts -->
-    <script src="./src/js/app.js"></script>
+    <script src="./src/js/app.js" defer></script>
 </body>
 </html>
