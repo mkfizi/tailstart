@@ -22,7 +22,7 @@ app.elements = {
 
 app.config = {
     isMenuActive: false,
-    responsiveBreakpoint: 640
+    breakpointSize: 640
 }
 
 app.init = () => {
@@ -118,8 +118,9 @@ app.view = {
         app.config.isNavbarMenuActive = !app.config.isNavbarMenuActive;
     },
 
+    // Update navbar menu to handle state when switching pass breakpoint size
     updateNavbarMenu: () => {
-        if (window.innerWidth >= app.config.responsiveBreakpoint && app.config.isNavbarMenuActive) {
+        if (window.innerWidth >= app.config.breakpointSize && app.config.isNavbarMenuActive) {
             app.view.toggleNavbarMenu();
         }
     }
@@ -158,6 +159,7 @@ app.util = {
         active: {},
         selector: `a:not([tabindex="-1"]), button:not([tabindex="-1"]), input:not([tabindex="-1"]), textarea:not([tabindex="-1"]), select:not([tabindex="-1"]), details:not([tabindex="-1"]), [tabindex]:not([tabindex="-1"]), [contenteditable="true"]:not([tabindex="-1"])`,
 
+        // Handle focus trap event
         handleEvent: (event, element) => {
             const focusableElements = element.querySelectorAll(app.util.focusTrap.selector);
             const firstElement = focusableElements[0];
@@ -175,6 +177,7 @@ app.util = {
             }
         },
 
+        // Enable focus trap on specified element
         enable: element => {
             const id = element.getAttribute("id");
             app.util.focusTrap.active[id] = event => app.util.focusTrap.handleEvent(event, element)
@@ -190,6 +193,7 @@ app.util = {
             }, 100);
         },
 
+        // Disable focus trap on specified element
         disable: element => {
             const id = element.getAttribute("id");
             window.removeEventListener("keydown", app.util.focusTrap.active[id]);
