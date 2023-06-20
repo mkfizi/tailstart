@@ -60,14 +60,21 @@
     <title>Tailstart</title>
 </head>
 <body class="relative min-h-screen antialiased bg-white dark:bg-neutral-900">
+
+    <!-- Navbar -->
     <nav id="navbar" class="sticky top-0 z-10 w-full h-16 bg-white border-b border-transparent dark:bg-neutral-900 dark:border-transparent">
         <div class="flex items-center justify-between w-full h-full max-w-screen-xl px-4 mx-auto sm:px-8">
+
+            <!-- Logo -->
             <a href="./" class="flex">
                 <img src="./src/images/logo.png" alt="Tailstart Logo" class="w-6 h-6 dark:hidden">
                 <img src="./src/images/logo-dark.png" alt="Tailstart Logo" class="hidden w-6 h-6 dark:block">
             </a>
             <div class="flex items-center gap-4">
+
+                <!-- Navbar menu -->
                 <ul id="navbarMenu" class="fixed top-0 left-0 z-20 flex-col hidden w-screen h-screen gap-4 p-4 overflow-y-auto bg-white sm:static dark:bg-neutral-800 sm:bg-transparent dark:sm:bg-transparent sm:h-full sm:w-auto sm:flex-row sm:overflow-none sm:gap-8 sm:flex sm:z-auto">
+                    <!-- Navbar menu toggle (hide) -->
                     <button type="button" id="navbarMenuToggle" class="absolute right-4 top-4 sm:hidden" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navbar menu">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 stroke-black dark:stroke-white" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -85,6 +92,8 @@
                         <a href="./components" class="invisible inline-block text-base font-semibold text-black dark:text-white sm:visible">Components</a>
                     </li>
                 </ul>
+
+                <!-- Dark mode toggle-->
                 <button type="button" id="darkModeToggle" aria-label="Dark mode toggle">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 dark:hidden stroke-black fill-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -96,6 +105,8 @@
                         <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
                     </svg>
                 </button>
+
+                <!-- Navbar menu toggle (show) -->
                 <button type="button" id="navbarMenuToggle" class="sm:hidden" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navbar menu">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 stroke-black dark:stroke-white" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -107,6 +118,8 @@
             </div>
         </div>
     </nav>
+
+    <!-- Content -->
     <main class="w-full max-w-screen-xl px-4 pt-8 pb-12 mx-auto sm:px-8">
         <header class="max-w-screen-md py-16 mx-auto text-center sm:py-24 lg:py-32">
             <h1 class="mt-8 text-4xl font-black text-black sm:text-5xl lg:text-6xl dark:text-white"><span class="text-neutral-600 dark:text-neutral-400">TailwindCSS</span> Starter Kit</h1>
@@ -235,10 +248,13 @@
         </section>
     </main>
     
+    <!-- Footer -->
     <footer class="absolute bottom-0 flex flex-col items-center justify-between w-full max-w-screen-xl px-4 pb-px transform -translate-x-1/2 sm:flex-row left-1/2 sm:px-8">
         <p class="text-sm text-neutral-700 dark:text-neutral-300"><span id="footerAppName"></span> © <span id="footerCurrentYear"></span></p>
         <span class="text-sm text-neutral-700 dark:text-neutral-300">Crafted by <a href="https://mkfizi.dev" target="_blank" class="inline-block text-black dark:text-white">mkfizi</a></span>
     </footer>
+
+    <!-- Scripts -->
     <script src="./src/js/app.js" defer></script>
 </body>
 </html>
