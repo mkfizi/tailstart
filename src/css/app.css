@@ -597,6 +597,11 @@ video {
   margin-bottom: 1rem;
 }
 
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -1092,6 +1097,11 @@ body{
   .sm\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
+  }
+
+  .sm\:my-16 {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
   }
 
   .sm\:flex {
