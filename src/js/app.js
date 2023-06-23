@@ -1,14 +1,14 @@
 /**
  * --------------------------------------------------------------------------
- * Tailstart v1.0.0: app.js
- * Licensed under MIT (https://github.com/mkfizi/tailstart/blob/main/LICENSE)
+ * Tailwind Starter Kit v1.0.0: app.js
+ * Licensed under MIT (https://github.com/mkfizi/tailwind-starter-kit/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
 
 'use strict';
 
 let app = {
-    name: 'Tailstart',
+    name: 'Tailwind Starter Kit',
 };
 
 app.elements = {
