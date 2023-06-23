@@ -84,13 +84,9 @@ app.view = {
     updateDarkMode: () => {
         app.util.toggleTransition();
 
-        if (localStorage.theme === 'light' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)) {
-            localStorage.theme = 'dark';
-            document.documentElement.classList.add('dark');
-        } else if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            localStorage.theme = 'light';
-            document.documentElement.classList.remove('dark');
-        }
+        const isLightMode = localStorage.theme === 'light' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches);
+        localStorage.theme = isLightMode ? 'dark' : 'light';
+        document.documentElement.classList.toggle('dark', isLightMode);
     },
 
     // Update the footer with current year, app name, and version
